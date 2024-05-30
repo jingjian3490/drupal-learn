@@ -1,0 +1,17 @@
+body {
+  background: none !important;
+  background-color: #8abdad !important;
+}
+
+/* 确保父容器是相对定位或固定高度 */
+.header {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  /*align-items: center; !* 垂直居中 *!*/
+  /*height: 100vh; !* 根据需要设置高度 *!*/
+}
+
+/* 确保导航元素本身也正确显示 */
+.primary-nav {
+  width: auto; /* 根据需要调整宽度 */
+}
