@@ -1,0 +1,22 @@
+uuid: 067d0d8f-2f76-4480-9a1b-6b297878625e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - learn_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: learn_theme_content
+theme: learn_theme
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

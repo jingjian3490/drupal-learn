@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 5751b320-b3fd-4ef9-94fb-f5b01e31425f
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: pfizer-admin
+  pass:
+    -
+      value: $2y$10$M/m8.GR3IKatUyGl7XPuyuKtS163R3wU9.sGNdrjNns2gmkg/4mQS
+      existing: ''
+      pre_hashed: false
+  mail:
+    -
+      value: admin@example.com
+  timezone:
+    -
+      value: UTC
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1716878249
+  access:
+    -
+      value: 1717060873
+  login:
+    -
+      value: 1716878279
+  init:
+    -
+      value: admin@example.com
+  roles:
+    -
+      target_id: administrator

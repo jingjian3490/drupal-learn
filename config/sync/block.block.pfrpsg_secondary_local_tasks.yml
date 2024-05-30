@@ -1,0 +1,22 @@
+uuid: 92753a6a-3a34-412a-b887-5170b17000ad
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pfrpsg
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: pfrpsg_secondary_local_tasks
+theme: pfrpsg
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

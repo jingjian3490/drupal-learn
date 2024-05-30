@@ -1,0 +1,40 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 8ad3f3c5-b36f-46d2-8a2a-44935ee7cb6f
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: Homepage
+  created:
+    -
+      value: 1717046653
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  body:
+    -
+      value: '<p>This is home page.</p><p>Explore Block、Block-Content and Custom Plugin Block .</p>'
+      format: basic_html
+      summary: ''

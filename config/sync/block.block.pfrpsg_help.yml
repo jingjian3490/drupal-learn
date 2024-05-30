@@ -1,0 +1,22 @@
+uuid: 1c6a72cf-908f-40a5-9c0c-40281bc1c44e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - pfrpsg
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: pfrpsg_help
+theme: pfrpsg
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

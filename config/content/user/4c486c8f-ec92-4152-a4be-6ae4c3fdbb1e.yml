@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: user
+  uuid: 4c486c8f-ec92-4152-a4be-6ae4c3fdbb1e
+  default_langcode: en
+default:
+  preferred_langcode:
+    -
+      value: en
+  name:
+    -
+      value: ''
+  status:
+    -
+      value: false
+  created:
+    -
+      value: 1716878249
+  access:
+    -
+      value: 0
+  login:
+    -
+      value: 0

@@ -1,0 +1,20 @@
+uuid: efaedf49-669a-4a3b-ae25-904c3f650428
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pfrpsg
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: pfrpsg_primary_admin_actions
+theme: pfrpsg
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
