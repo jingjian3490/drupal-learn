@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: de8f1b77-2890-4945-a99e-d947c0be7098
+name: 'Drupal Learn'
+mail: caneg@ciandt.com
+slogan: 'Up Up Up'
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

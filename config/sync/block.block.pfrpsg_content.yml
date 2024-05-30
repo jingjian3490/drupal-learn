@@ -1,0 +1,22 @@
+uuid: f4e4dd4e-b1c7-4b65-8d56-5b4766477096
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - pfrpsg
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: pfrpsg_content
+theme: pfrpsg
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

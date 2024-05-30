@@ -1,0 +1,25 @@
+uuid: 3fc781e7-63c8-4982-b6bb-1c01e5accba6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ef3a8cb1-9a0f-4c96-bd37-921340d4d3b9'
+  module:
+    - block_content
+  theme:
+    - learn_theme
+id: learn_theme_content_block
+theme: learn_theme
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:ef3a8cb1-9a0f-4c96-bd37-921340d4d3b9'
+settings:
+  id: 'block_content:ef3a8cb1-9a0f-4c96-bd37-921340d4d3b9'
+  label: 'Content Block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
