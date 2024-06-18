@@ -1,0 +1,170 @@
+.path-quiz-page {
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    h1 {
+      @include xxl {
+        white-space: nowrap;
+      }
+    }
+  }
+  .text-description {
+    margin-bottom: 30px;
+
+    @include md {
+      margin-bottom: 50px;
+    }
+  }
+  .paragraph--type--questions.paragraph--view-mode--default {
+    padding-top: 30px;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+    .field--name-field-questions {
+      padding-bottom: 24px;
+    }
+
+    @include md {
+      padding-top: 50px;
+      h1 {
+        font-size: 54px;
+      }
+      .field--name-field-questions {
+        padding-bottom: 32px;
+      }
+    }
+  }
+  .paragraph--type--questions.paragraph--view-mode--preview {
+    padding-bottom: 114px;
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    .field--name-field-questions {
+      padding-bottom: 30px;
+    }
+
+    @include md {
+      padding-bottom: 76px;
+      h1 {
+        font-size: 40px;
+        margin-bottom: 50px;
+      }
+      .field--name-field-questions {
+        padding-bottom: 50px;
+      }
+    }
+  }
+  .paragraph--type--questions {
+    background: var(--white);
+    padding: 0 20px;
+    .field--name-field-questions {
+      > .field__item {
+        &:last-child {
+          .input-box {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    h1 {
+      font-family: $font-title;
+      margin-top: 0;
+      font-weight: 300;
+    }
+    .instruction-text {
+      font-weight: 300;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    .field--name-field-question {
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+    .input-box {
+      margin-bottom: 24px;
+      font-weight: 300;
+      .input-textfield {
+        input {
+          width: calc(100% - 40px);
+          padding: 16px 20px;
+          border-radius: 12px;
+          border: 1px solid var(--light-grey);
+          font-size: 16px;
+          &::placeholder {
+            font-weight: 300;
+          }
+        }
+      }
+      .input-des {
+        margin-top: 16px;
+      }
+      .error {
+        color: var(--error-color);
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 8px;
+      }
+    }
+    .quiz-total {
+      padding-bottom: 30px;
+      text-align: center;
+      font-weight: 300;
+    }
+    .quiz-des {
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 30px;
+      font-size: 16px;
+      strong {
+        font-weight: 700;
+      }
+    }
+    .quiz-submit {
+      text-align: center;
+      .button {
+        width: 60px;
+        min-width: auto;
+      }
+    }
+
+    @include md {
+      padding: 0 125px;
+      .instruction-text {
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+      .input-box {
+        margin-bottom: 32px;
+        .input-textfield {
+          input {
+            font-size: 18px;
+          }
+        }
+        .error {
+          font-size: 16px;
+        }
+      }
+      .quiz-total {
+        padding-bottom: 50px;
+      }
+      .quiz-des {
+        margin-bottom: 50px;
+        font-size: 18px;
+      }
+      .quiz-submit {
+        .button {
+          width: 71px;
+        }
+      }
+      .field--name-field-question {
+        font-size: 18px;
+      }
+    }
+
+    @include xxl {
+      padding: 0 360px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Forcontu Pages module file.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function forcontu_pages_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'entity.node.edit_form':
+      $node = $route_match->getParameter('node');
+      $output = '<p>' . t('Text A. This text is shown in every node edit form. Current node is of type %type and its id is %id', [
+        '%type' => $node->getType(),
+        '%id' => $node->id(),
+      ]) . '</p>';
+      if ($node->getType() == 'page') {
+        $output .= '<p>' . t('Text B. This text is shown only in Basic pages nodes.') . '</p>';
+      }
+      return $output;
+  }
+}

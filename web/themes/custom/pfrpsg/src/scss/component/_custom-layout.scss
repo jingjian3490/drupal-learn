@@ -1,0 +1,23 @@
+@use "sass:math";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-none {
+  flex: none;
+}
+
+@each $key, $value in $flex-positon-map {
+  .align-items-#{$key} {
+    align-items: $value;
+  }
+  .justify-content-#{$key} {
+    justify-content: $value;
+  }
+}

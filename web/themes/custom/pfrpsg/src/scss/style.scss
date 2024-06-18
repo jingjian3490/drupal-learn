@@ -1,0 +1,41 @@
+@import "base/variables";
+@import "base/reset";
+@import "base/breakpoints";
+@import "mixins/media-queries";
+@import "mixins/fonts";
+@import "mixins/mixins";
+
+// component
+@import "component/custom-layout";
+
+// layout
+@import "layout/common";
+@import "layout/form";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/floating-icon";
+@import "layout/home-banner";
+@import "layout/other-banner";
+@import "layout/description";
+@import "layout/bottom-reference";
+@import "layout/image-with-text-card";
+@import "layout/popup";
+
+// pages
+@import "pages/others";
+@import "pages/what-is-migraine";
+@import "pages/migraine-or-headache";
+@import "pages/migraine-triggers";
+@import "pages/different-types-of-migraines";
+@import "pages/myths-vs-facts";
+@import "pages/getting-diagnosed";
+@import "pages/types-of-treatments";
+@import "pages/lifestyle-tips";
+@import "pages/quiz-start";
+@import "pages/quiz-page";
+@import "pages/quiz-result";
+@import "pages/quiz-report";
+@import "pages/migraine-toolkit";
+@import "pages/find-a-doctor";
+@import "pages/join-the-conversation";
+@import "pages/reference";

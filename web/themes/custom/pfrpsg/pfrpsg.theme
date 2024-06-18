@@ -1,0 +1,74 @@
+<?php
+
+/**
+ * @file
+ * Place your custom PHP code in this file.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function pfrpsg_preprocess_html(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  if ($path_alias) {
+    $path_alias = preg_replace("/\\d+/", '', ltrim($path_alias, '/'));
+    $variables['attributes']['class'][] = 'path-' . Html::cleanCssIdentifier($path_alias);
+  }
+}
+
+/**
+ * Implements template_preprocess_field().
+ */
+function pfrpsg_preprocess_field(&$variables) {
+  if (
+    $variables['field_name'] == 'field_questions' &&
+    $variables['field_type'] == 'entity_reference_revisions' &&
+    $variables['element']['#items']->getItemDefinition()->getSetting('target_type') == 'paragraph'
+  ) {
+    foreach ($variables['items'] as $idx => $item) {
+      $variables['items'][$idx]['content']['#paragraph']->index = $idx;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function pfrpsg_preprocess_node(&$variables) {
+
+  $variables['test_value'] = 'test_value';
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form.
+ */
+function pfrpsg_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#form_id'])) {
+    $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#form_id']);
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function pfrpsg_page_attachments_alter(array &$attachments) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+  if ($path_alias == '/home' || $path_alias == '/') {
+    $allowed_libraries = [
+      'adobe_analytics/tag_manager',
+      'pfizer_analytics/urlconfig',
+    ];
+    foreach ($attachments['#attached']['library'] as $key => $library) {
+      if (!in_array($library, $allowed_libraries)) {
+        unset($attachments['#attached']['library'][$key]);
+      }
+    }
+    $attachments['#attached']['library'][] = 'pfrpsg/landing';
+  }
+}

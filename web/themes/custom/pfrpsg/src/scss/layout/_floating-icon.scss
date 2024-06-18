@@ -1,0 +1,65 @@
+#block-pfrpsg-assess-mycondition-floating-icon {
+  font-family: "Noto Sans";
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: var(--light);
+  padding: 24px 0;
+  font-size: 20px;
+  line-height: 1.2;
+  box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 25%);
+  z-index: 4;
+  width: 100%;
+
+  .field--name-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    font-weight: 700;
+    article,
+    p {
+      margin: 0;
+    }
+    a {
+      color: var(--font-color);
+
+      @include lg {
+        white-space: nowrap;
+      }
+    }
+  }
+  .field--name-field-media-image {
+    width: 33px;
+    height: 33px;
+    img {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  @include sm {
+    bottom: 100px;
+    width: 30%;
+    max-width: 300px;
+    min-width: 167px;
+    padding: 24px 18px 24px 21px;
+    .field--name-body {
+      justify-content: flex-start;
+    }
+  }
+
+  @include md {
+    padding-right: 32px;
+    padding-left: 36px;
+    min-width: 128px;
+  }
+}
+
+.path-migraine-risk-assessment-quiz,
+.path-quiz-page,
+.path-quiz-result {
+  #block-pfrpsg-assess-mycondition-floating-icon {
+    display: none;
+  }
+}

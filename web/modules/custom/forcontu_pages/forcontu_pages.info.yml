@@ -1,0 +1,5 @@
+name: 'Forcontu Pages'
+type: module
+description: 'Forcontu Pages'
+package: Forcontu
+core_version_requirement: ^10 || ^11

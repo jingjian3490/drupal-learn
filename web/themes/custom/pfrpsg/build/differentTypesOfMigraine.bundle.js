@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpfrpsg=self.webpackChunkpfrpsg||[]).push([[314],{610:function(e,n,f){f.r(n);var r,a=f(576);r=jQuery,(0,a.q)("different types of migraine"),r(".field--name-field-reference-and-gcma a").attr("sc:linkname","different types of migraine | content | reference")}}]);

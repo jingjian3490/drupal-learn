@@ -1,0 +1,85 @@
+.path-different-types-of-migraine {
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    margin-bottom: 40px;
+  }
+  .paragraph--type--image-text-card-collection {
+    .field--name-field-image-with-text-card {
+      > .field__item {
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:nth-of-type(odd) {
+          color: var(--white);
+          .field--name-field-image,
+          .field--name-field-text-card {
+            background-color: var(--dark);
+          }
+        }
+        &:nth-of-type(even) {
+          .field--name-field-image,
+          .field--name-field-text-card {
+            background-color: var(--light);
+          }
+        }
+      }
+    }
+    .field--name-field-media-image {
+      text-align: center;
+
+      @include md {
+        height: 180px;
+        line-height: 180px;
+      }
+    }
+    .field--name-field-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 56px;
+    }
+    .paragraph--type--image-with-text-card {
+      .container {
+        display: flex;
+        flex-direction: column;
+        .field--name-field-text-card {
+          padding: 0 15px 56px 15px;
+          text-align: center;
+        }
+        .field--name-field-image {
+          img {
+            line-height: 0;
+            vertical-align: bottom;
+          }
+        }
+
+        @include md {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          .field--name-field-text-card {
+            width: calc(calc(100% - 15px) / 19 * 11 - 120px);
+            padding: 62px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+          }
+          .field--name-field-image {
+            width: calc(calc(100% - 15px) / 19 * 8);
+            padding: 40px 0;
+            img {
+              vertical-align: middle;
+            }
+          }
+        }
+
+        @include lg {
+          .field--name-field-text-card {
+            width: calc(calc(100% - 15px) / 19 * 11 - 318px);
+            padding: 62px 168px 62px 150px;
+          }
+        }
+      }
+    }
+  }
+}

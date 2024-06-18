@@ -1,0 +1,363 @@
+.path-quiz-result {
+  .paragraph--type--banner {
+    margin-bottom: 50px;
+
+    @include md {
+      margin-bottom: 64px;
+    }
+  }
+  .quiz-result-container {
+    @extend %structure;
+
+    margin-bottom: 40px;
+    .quiz-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--light);
+      padding: 50px 10px 30px;
+      margin-bottom: 32px;
+
+      @include md {
+        padding: 60px 60px 35px;
+        margin-bottom: 40px;
+      }
+
+      @include xxl {
+        padding-left: 269px;
+        padding-right: 269px;
+      }
+    }
+    .quiz-score {
+      font-family: $font-title;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 26px;
+      margin-bottom: 11px;
+
+      @include md {
+        font-size: 40px;
+        margin-bottom: 9px;
+      }
+    }
+    .quiz-des {
+      font-size: 16px;
+      text-align: center;
+      strong {
+        font-weight: 700;
+      }
+
+      @include md {
+        font-size: 20px;
+      }
+    }
+    .share {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      .button-email,
+      .button-pdf,
+      .button-search {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin: 0;
+        &::after {
+          font-family: iconfont;
+          width: 20px;
+          height: 20px;
+          margin-left: 10px;
+        }
+      }
+      .button-email {
+        cursor: pointer;
+        min-width: 74px;
+        &::after {
+          content: "\e60a";
+        }
+      }
+      .button-pdf {
+        background: var(--blue);
+        color: var(--body-color);
+        min-width: 125px;
+        &::after {
+          content: "\e608";
+        }
+      }
+      .button-search {
+        background: var(--light);
+        color: var(--dark);
+        width: 100%;
+        &::after {
+          content: "\e609";
+        }
+      }
+
+      @include rwd(375) {
+        gap: 16px 4px;
+      }
+
+      @include rwd(390) {
+        gap: 16px;
+        justify-content: center;
+        .button-search {
+          width: 284px;
+        }
+      }
+
+      @include md {
+        gap: 24px;
+        .button-search {
+          width: 223px;
+        }
+      }
+    }
+  }
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    .field--name-field-ckeditor {
+      @include m {
+        padding-right: 0;
+      }
+    }
+  }
+  .scroll-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25.6%;
+      height: 100%;
+      background: linear-gradient(270deg, var(--body-color) 0%, rgb(245 243 233 / 0%) 100%);
+    }
+
+    @include md {
+      &::after {
+        content: none;
+      }
+    }
+  }
+  .mask-hidden {
+    &::after {
+      content: none !important;
+    }
+  }
+  .table-container {
+    overflow-x: auto;
+    position: relative;
+    margin-bottom: 13px;
+    margin-right: 20px;
+
+    table {
+      width: 100%;
+      min-width: 728px;
+      border-collapse: collapse;
+      text-align: center;
+      font-weight: 300;
+      border: 1px solid rgb(0 0 0 / 16%);
+    }
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          background: rgb(255 255 255 / 32%);
+        }
+      }
+    }
+    th,
+    td {
+      padding: 24px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 1px;
+        height: 50%;
+        background: rgb(0 0 0 / 16%);
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+    }
+    th {
+      font-family: $font-title;
+      color: var(--black);
+      font-weight: 300;
+      font-size: 24px;
+      text-transform: uppercase;
+
+      @include md {
+        font-size: 28px;
+      }
+    }
+
+    @include md {
+      margin-right: 0;
+      margin-bottom: 64px;
+    }
+  }
+  .scroll-des {
+    font-size: 12px;
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 48px;
+
+    @include md {
+      display: none;
+    }
+  }
+  .paragraph--type--treatment {
+    background: var(--light);
+    padding: 29px 10px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column-reverse;
+    .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+      .field--name-field-ckeditor {
+        @include m {
+          padding-right: 20px;
+        }
+      }
+    }
+    .field--name-field-basic-paragraph {
+      font-family: $font-title;
+      text-align: center;
+    }
+    .your-doctor {
+      color: var(--black);
+      text-transform: uppercase;
+      font-size: 20px;
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    .your-headache {
+      font-size: 28px;
+      font-weight: 400;
+      text-transform: uppercase;
+      p {
+        margin-bottom: 16px;
+      }
+    }
+    .paragraph--type--image-text-card-collection {
+      background: transparent;
+      padding: 0;
+      .field--name-field-image-with-text-card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        > .field__item {
+          background: var(--dark);
+          color: var(--white);
+        }
+        .container {
+          padding: 50px 56px 64px;
+        }
+        .field--name-field-media-image {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .field--name-field-text-card {
+          text-align: center;
+          font-family: $font-title;
+          text-transform: uppercase;
+          font-size: 18px;
+        }
+      }
+    }
+
+    @include sm {
+      .paragraph--type--image-text-card-collection {
+        .field--name-field-image-with-text-card {
+          .field--name-field-text-card {
+            font-size: 25px;
+          }
+        }
+      }
+      .your-doctor {
+        font-size: 28px;
+        p {
+          margin-bottom: 1px;
+        }
+      }
+      .your-headache {
+        font-size: 40px;
+        p {
+          margin-bottom: 38px;
+        }
+      }
+    }
+
+    @include md {
+      padding: 49px 0 19px;
+      .paragraph--type--image-text-card-collection {
+        .field--name-field-image-with-text-card {
+          flex-flow: row wrap;
+          justify-content: center;
+          > .field__item {
+            width: calc((100% - 15px) / 2);
+          }
+          .container {
+            padding: 54px 50px 55px;
+          }
+          .field--name-field-media-image {
+            height: 138px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    @include xxl {
+      .paragraph--type--image-text-card-collection {
+        .field--name-field-image-with-text-card {
+          .container {
+            padding-left: 180px;
+            padding-right: 180px;
+          }
+        }
+      }
+    }
+  }
+}
+#block-pfrpsg-test-result-top {
+  text-align: center;
+  .result-title {
+    font-family: $font-title;
+    color: var(--blue);
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 9px;
+  }
+  .result-description {
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 21px;
+  }
+
+  @include md {
+    .result-title {
+      font-size: 44px;
+      margin-bottom: 17px;
+    }
+    .result-description {
+      font-size: 40px;
+      margin-bottom: 42px;
+    }
+  }
+}
+#block-pfrpsg-test-result-image {
+  margin-bottom: 26px;
+
+  @include md {
+    margin-bottom: 18px;
+  }
+}

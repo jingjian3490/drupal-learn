@@ -21,6 +21,9 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/default_content": "^2.0@alpha",
+        "drupal/devel": "^5.0",
+        "drupal/devel_php": "^1.7",
+        "drupal/examples": "^4.0",
         "drush/drush": "^12.5"
     },
     "conflict": {
