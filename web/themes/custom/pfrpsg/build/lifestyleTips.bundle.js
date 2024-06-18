@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpfrpsg=self.webpackChunkpfrpsg||[]).push([[686],{451:function(e,n,s){s.r(n);var f,r=s(576);f=jQuery,(0,r.q)("lifestyle tips"),f(".field--name-field-reference-and-gcma a").attr("sc:linkname","lifestyle tips | content | reference")}}]);

@@ -1,0 +1,180 @@
+.path-join-the-conversation {
+  .text-description {
+    margin-bottom: 36px;
+
+    @include md {
+      margin-bottom: 62px;
+    }
+  }
+  .paragraph--type--conversations {
+    background: var(--white);
+    padding: 37px 20px 40px;
+    > .field--name-field-ckeditor {
+      max-width: 1680px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    @include md {
+      padding: 65px 20px 179px;
+      > .field--name-field-ckeditor {
+        text-align: left;
+      }
+    }
+
+    @include xxl {
+      padding: 65px 125px 179px;
+    }
+  }
+  .field--name-field-conversation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1680px;
+    margin: 0 auto;
+    > .field__item {
+      color: var(--white);
+      position: relative;
+      perspective: 1000;
+      transform-style: preserve-3d;
+    }
+    .fliping {
+      transform: rotateY(180deg);
+    }
+    .flip {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      height: 100%;
+    }
+    .eye {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 22px;
+    }
+    .front {
+      cursor: pointer;
+      background: var(--blue);
+      border-radius: 16px;
+      padding: 48px 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% - 80px);
+      height: calc(100% - 96px);
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+    }
+    .back {
+      cursor: pointer;
+      border-radius: 16px;
+      background: var(--blue);
+      font-size: 12px;
+      line-height: 16px;
+      text-align: left;
+      backface-visibility: hidden;
+      transform: rotateY(-180deg);
+      padding: 15px;
+      height: calc(100% - 30px);
+    }
+    .quote {
+      font-family: iconfont;
+      text-align: left;
+      width: 100%;
+      &::after {
+        content: "\e60c";
+        font-size: 24px;
+        color: var(--light);
+      }
+    }
+    .paragraph--type--conversation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 24px;
+      height: 100%;
+      font-weight: 300;
+      .field--name-field-image {
+        img {
+          width: 90px;
+          height: 90px;
+          object-fit: cover;
+          border-radius: 90px;
+          vertical-align: bottom;
+        }
+      }
+      .field--name-field-the-title {
+        .field--name-field-title {
+          font-family: $font-title;
+          font-weight: 500;
+          font-size: 22px;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+        }
+        .field--name-field-ckeditor {
+          line-height: 22px;
+          p {
+            &:first-child {
+              font-size: 16px;
+              margin-bottom: 24px;
+            }
+            &:last-child {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .content-container {
+      position: relative;
+      flex-grow: 1;
+      .field--name-field-ckeditor {
+        line-height: 22px;
+        opacity: 1;
+        transition: opacity ease 0.5s;
+      }
+    }
+
+    @include sm {
+      .back {
+        padding: 20px;
+        height: calc(100% - 40px);
+      }
+    }
+
+    @include md {
+      justify-content: space-between;
+      flex-flow: row wrap;
+      .front {
+        padding: 32px;
+        width: calc(100% - 64px);
+        height: calc(100% - 64px);
+      }
+      .back {
+        font-size: 14px;
+        padding: 30px;
+        height: calc(100% - 60px);
+      }
+    }
+
+    @include lg {
+      .front {
+        padding: 64px;
+        width: calc(100% - 128px);
+        height: calc(100% - 128px);
+      }
+      .back {
+        font-size: 16px;
+      }
+    }
+
+    @include xl {
+      > .field__item {
+        max-width: calc(50% - 7.5px);
+      }
+    }
+  }
+}

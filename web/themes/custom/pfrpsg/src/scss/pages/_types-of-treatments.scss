@@ -1,0 +1,175 @@
+.path-types-of-treatments {
+  .text-description {
+    margin-bottom: 40px;
+
+    @include md {
+      margin-bottom: 55px;
+    }
+  }
+  .field--name-field-treatment {
+    > .field__item {
+      &:nth-of-type(odd) {
+        background: var(--light);
+        .paragraph--type--image-text-card-collection {
+          background: var(--light);
+        }
+        .field--name-field-media-image {
+          background: rgb(255 255 255 / 16%);
+        }
+      }
+      &:nth-of-type(even) {
+        color: var(--white);
+        background: var(--dark);
+        .paragraph--type--image-text-card-collection {
+          background: var(--dark);
+        }
+        .field--name-field-media-image {
+          background: rgb(43 72 100 / 16%);
+        }
+        p {
+          font-weight: 300;
+        }
+      }
+
+      @include md {
+        &:first-child {
+          border-top: 15px solid var(--white);
+        }
+      }
+    }
+    .field--name-field-basic-paragraph {
+      margin-top: 40px;
+      .field--name-field-ckeditor {
+        padding: 0;
+        p {
+          font-weight: 300;
+        }
+      }
+
+      @include md {
+        margin-top: 65px;
+        .field--name-field-ckeditor {
+          p {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .paragraph--type--image-text-card-collection {
+      padding: 0;
+    }
+  }
+  .paragraph--type--treatment {
+    border-top: 15px solid var(--white);
+    padding: 50px 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    .paragraph--type--image-with-text-card.paragraph--view-mode--what-is-migraine {
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      .field--name-field-media-image {
+        width: 180px;
+        height: auto;
+        padding: 19px 85px 2px;
+        margin: 0 auto 32px;
+      }
+    }
+    .paragraph--type--image-text-card-collection {
+      text-align: center;
+      .field--name-field-image-with-text-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 32px;
+      }
+      .paragraph--type--image-with-text-card {
+        .field--name-field-media-image {
+          background: none;
+          margin: 0 auto 32px;
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+    h1 {
+      margin-top: 0;
+      font-family: $font-title;
+      font-size: 25px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    @include md {
+      border-top: none;
+      .paragraph--type--image-with-text-card.paragraph--view-mode--what-is-migraine {
+        .container {
+          flex-direction: row-reverse;
+          column-gap: 32px;
+          align-items: center;
+        }
+        .field--name-field-media-image {
+          padding-left: 50px;
+          padding-right: 50px;
+          margin-bottom: 0;
+        }
+        p {
+          margin-bottom: 26px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .paragraph--type--image-text-card-collection {
+        text-align: left;
+        .field--name-field-image-with-text-card {
+          flex-direction: row;
+          justify-content: space-between;
+          > .field__item {
+            width: calc(calc(100% - 48px) / 3);
+          }
+        }
+        .paragraph--type--image-with-text-card {
+          .field--name-field-media-image {
+            margin: 0 0 24px 0;
+          }
+        }
+      }
+      .treatment-desc {
+        line-height: 22px;
+      }
+      h1 {
+        font-weight: 400;
+        font-size: 52px;
+        text-align: left;
+      }
+    }
+
+    @include rwd(1320) {
+      padding: 70px 125px 45px 125px;
+      .paragraph--type--image-with-text-card.paragraph--view-mode--what-is-migraine {
+        .container {
+          column-gap: 64px;
+        }
+        .field--name-field-media-image {
+          padding-left: 150px;
+          padding-right: 150px;
+        }
+      }
+    }
+  }
+  .paragraph--type--basic-paragraph.paragraph--view-mode--types-of-treatments {
+    padding: 30px 0;
+  }
+  .paragraph--type--image-with-text-card.paragraph--view-mode--what-is-migraine {
+    margin-bottom: 32px;
+
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpfrpsg=self.webpackChunkpfrpsg||[]).push([[220],{851:function(e,r,n){n.r(r);var a,i=n(576);a=jQuery,(0,i.q)("migraine triggers"),a(".field--name-field-reference-and-gcma a").attr("sc:linkname","migraine triggers | content | reference")}}]);

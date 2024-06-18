@@ -1,0 +1,7 @@
+forcontu_hello.hello:
+  title: Hello Page
+  description: 'Hello Page menu link'
+  route_name: forcontu_hello.hello
+  parent: system.admin_structure
+#  menu_name: main
+#  weight: 1

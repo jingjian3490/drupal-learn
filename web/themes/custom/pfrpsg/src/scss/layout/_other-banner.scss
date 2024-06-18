@@ -1,0 +1,139 @@
+.paragraph--type--banner {
+  font-family: $font-title;
+  position: relative;
+  margin-bottom: 50px;
+  .field--name-field-banner-image {
+    img {
+      max-width: 100%;
+      overflow: hidden;
+      font-size: 0;
+      height: auto;
+      vertical-align: bottom;
+      object-fit: cover;
+    }
+  }
+
+  // pc img
+  .field--name-field-media-image {
+    display: none;
+  }
+
+  // Banner title
+  .field--name-field-banner-text {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: right;
+    right: 6.15%;
+    width: 113px;
+  }
+
+  @include rwd(414) {
+    .field--name-field-banner-text {
+      right: 5%;
+    }
+  }
+
+  @include sm {
+    .field--name-field-banner-text {
+      font-size: 35px;
+      line-height: 29px;
+      width: 300px;
+    }
+  }
+
+  @include md {
+    .field--name-field-media-image {
+      display: block;
+      height: 150px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .field--name-field-mobile-image {
+      display: none;
+    }
+  }
+
+  @include lg {
+    .field--name-field-media-image {
+      height: auto;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
+    .field--name-field-banner-text {
+      right: 8.3%;
+      width: auto;
+    }
+  }
+
+  @include xl {
+    .field--name-field-banner-text {
+      right: 18.334%;
+    }
+  }
+}
+.path-getting-diagnosed,
+.path-types-of-treatments,
+.path-lifestyle-tips {
+  @include sm {
+    .field--name-field-banner-text {
+      width: 256px;
+    }
+  }
+
+  @include md {
+    .field--name-field-banner-text {
+      width: 300px;
+    }
+  }
+
+  @include xl {
+    .field--name-field-banner-text {
+      right: 20.139%;
+    }
+  }
+}
+.path-migraine-risk-assessment-quiz,
+.path-quiz-page,
+.path-quiz-result {
+  @include sm {
+    .field--name-field-banner-text {
+      width: 224px;
+    }
+  }
+
+  @include md {
+    .field--name-field-banner-text {
+      width: 300px;
+    }
+  }
+
+  @include xl {
+    .field--name-field-banner-text {
+      right: 22.7%;
+    }
+  }
+}
+.path-join-the-conversation {
+  @include sm {
+    .field--name-field-banner-text {
+      font-size: 35px;
+      line-height: 29px;
+      width: 283px;
+    }
+  }
+
+  @include md {
+    .field--name-field-banner-text {
+      width: 300px;
+    }
+  }
+}

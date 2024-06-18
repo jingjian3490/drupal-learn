@@ -1,0 +1,138 @@
+.path-getting-diagnosed {
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    margin-bottom: 50px;
+
+    @include md {
+      margin-bottom: 40px;
+    }
+  }
+  .paragraph--type--image-text-card-collection {
+    background: var(--dark);
+    color: var(--white);
+    font-family: $font-title;
+    padding: 50px 15px;
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      @include md {
+        align-items: center;
+        flex-direction: row;
+      }
+    }
+
+    .field--name-field-image-with-text-card {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 15px;
+      > .field__item {
+        max-width: 100%;
+        border: 3px solid var(--white);
+        border-radius: 16px;
+        padding: 19px 19px 32px;
+
+        @include md {
+          padding: 60px 20px 60px 24px;
+          flex: 0 0 calc(50% - 58px);
+          max-width: calc(50% - 58px);
+        }
+
+        @include xl {
+          flex: 0 0 calc(100% / 3 - 60px);
+          max-width: calc(100% / 3 - 60px);
+        }
+
+        @include xxl {
+          flex: 0 0 calc(100% / 3 - 129px);
+          max-width: calc(100% / 3 - 129px);
+          padding: 60px 49px 60px 64px;
+        }
+      }
+      .field--name-field-media-image {
+        height: 140px;
+        line-height: 140px;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 24px;
+        img {
+          line-height: 0;
+          vertical-align: middle;
+        }
+      }
+      .field--name-field-text-card {
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 28px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      @include md {
+        flex-direction: row;
+        .field--name-field-text-card {
+          line-height: 30px;
+          text-align: left;
+        }
+        .field--name-field-media-image {
+          width: 120px;
+          margin-right: 40px;
+          margin-bottom: 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .paragraph--type--image-with-text-card.paragraph--view-mode--different-types-migraine {
+    .field--name-field-image {
+      background: var(--white);
+      padding: 32px 27px 36px 43px;
+      display: flex;
+      justify-content: center;
+      .field--name-field-media-image {
+        max-width: 380px;
+      }
+      img {
+        vertical-align: bottom;
+      }
+    }
+    .field--name-field-text-card {
+      background: var(--light);
+      padding: 40px 20px;
+      line-height: 22px;
+    }
+
+    @include md {
+      .container {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 15px;
+        padding: 15px 0;
+      }
+      .field--name-field-image {
+        background: var(--light);
+        padding: 24px;
+        align-items: center;
+        width: calc((100% - 15px) / 3);
+        .field--name-field-media-image {
+          min-width: 250px;
+        }
+      }
+      .field--name-field-text-card {
+        padding: 64px 20px 64px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: calc((100% - 15px) / 3 * 2);
+      }
+    }
+
+    @include xl {
+      .field--name-field-text-card {
+        padding: 64px 80px 64px 125px;
+      }
+      .field--name-field-image {
+        padding: 74px 134px;
+      }
+    }
+  }
+}

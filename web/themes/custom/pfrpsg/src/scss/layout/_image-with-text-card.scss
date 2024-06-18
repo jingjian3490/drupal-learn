@@ -1,0 +1,131 @@
+// Card group
+.paragraph--type--image-text-card-collection {
+  background: var(--white);
+  padding: 15px 10px;
+  h4 {
+    font-family: $font-title;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .field--name-field-image-with-text-card {
+    .field--name-field-media-image {
+      margin: 0 auto 40px;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  @include md {
+    padding: 15px 0;
+    h4 {
+      margin-bottom: 24px;
+    }
+    .field--name-field-image-with-text-card {
+      .field--name-field-media-image {
+        width: 188px;
+        height: 125px;
+      }
+    }
+  }
+}
+
+// Top image bottom text card
+.path-migraine-or-headache,
+.path-migraine-triggers,
+.path-lifestyle-tips {
+  .paragraph--type--image-text-card-collection {
+    .field--name-field-image-with-text-card {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      > .field__item {
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &:nth-of-type(4n),
+        &:nth-of-type(4n - 1) {
+          background-color: var(--light);
+          a {
+            color: var(--dark);
+          }
+        }
+        &:nth-of-type(4n - 3),
+        &:nth-of-type(4n - 2) {
+          background-color: var(--dark);
+          color: var(--white);
+          a {
+            color: var(--white);
+          }
+        }
+      }
+      .container {
+        padding: 56px 15px;
+      }
+      .field--name-field-media-image {
+        margin-bottom: 40px;
+      }
+      .field--name-field-text-card {
+        line-height: 22px;
+        font-weight: 300;
+      }
+    }
+
+    @include md {
+      .field--name-field-image-with-text-card {
+        flex-flow: row wrap;
+        justify-content: center;
+        > .field__item {
+          width: calc((100% - 15px) / 2);
+        }
+        .container {
+          padding: 64px 20px 28px;
+          min-height: 200px;
+        }
+        .field--name-field-media-image {
+          margin-bottom: 32px;
+          line-height: 125px;
+          img {
+            line-height: 0;
+            vertical-align: bottom;
+          }
+        }
+      }
+    }
+
+    @include xl {
+      .field--name-field-image-with-text-card {
+        .container {
+          padding-left: 98px;
+          padding-right: 98px;
+          min-height: 310px;
+        }
+        .field--name-field-text-card {
+          font-size: 25px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+// Left text right image card
+.path-different-types-of-migraine {
+  .paragraph--type--image-text-card-collection {
+    @include md {
+      .field--name-field-image-with-text-card {
+        .field--name-field-media-image {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

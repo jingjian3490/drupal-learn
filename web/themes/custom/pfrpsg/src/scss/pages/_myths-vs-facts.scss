@@ -1,0 +1,93 @@
+.path-myths-vs-facts {
+  .paragraph--type--basic-paragraph {
+    margin-bottom: 18px;
+
+    @include md {
+      margin-bottom: 20px;
+    }
+  }
+}
+.paragraph--type--myths-vs-facts {
+  @extend %structure;
+}
+.field--name-field-myth-vs-fact {
+  > .field__item {
+    margin-bottom: 15px;
+  }
+}
+.paragraph--type--myth-vs-fact {
+  background: var(--dark);
+  color: var(--light);
+  border-bottom: 5px solid var(--light);
+  padding: 23px 23px 24px;
+
+  @include md {
+    padding: 35px 33px 37px 33px;
+  }
+}
+.field--name-field-myth {
+  position: relative;
+  font-family: $font-title;
+  font-weight: 300;
+  font-size: 22px;
+  cursor: pointer;
+  padding-right: 29.9%;
+  .title-num {
+    font-weight: 500;
+  }
+
+  &::after {
+    font-family: iconfont;
+    content: "\e606";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%) rotate(180deg);
+    font-size: 10px;
+    transition: all 0.3s;
+  }
+
+  @include md {
+    padding-right: 32px;
+    font-size: 25px;
+  }
+}
+.fact-expand {
+  &::after {
+    transform: translate(0, -50%) rotate(0);
+  }
+}
+.field--name-field-fact {
+  display: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 23px;
+  padding-bottom: 15px;
+  padding-right: 11px;
+  p {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    color: var(--light);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include md {
+    padding-right: 67px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 32px;
+    padding-bottom: 8px;
+    p {
+      margin-bottom: 27px;
+    }
+  }
+}

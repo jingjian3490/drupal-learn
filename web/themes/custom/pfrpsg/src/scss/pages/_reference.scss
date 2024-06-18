@@ -1,0 +1,40 @@
+.path-reference {
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    h1 {
+      margin-bottom: 16px;
+      padding-bottom: 56px;
+
+      @include md {
+        padding-bottom: 38px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .paragraph--type--title-ckeditor-collection {
+    @extend %structure;
+  }
+  .paragraph--type--title-with-ckeditor {
+    .field--name-field-title {
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .field--name-field-ckeditor {
+      margin-bottom: 53px;
+      font-weight: 300;
+      p {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      strong {
+        font-weight: 700;
+      }
+    }
+    a {
+      color: var(--font-color);
+    }
+  }
+}

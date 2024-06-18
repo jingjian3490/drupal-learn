@@ -1,0 +1,27 @@
+name: 'SG Rimegepant Theme'
+description: 'A theme for SG Rimegepant Patient Website.'
+base theme: 'starterkit_theme'
+package: 'Core'
+
+core: 10.x
+type: theme
+core_version_requirement: ^10
+
+regions:
+  header: 'Header'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Main Content'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+
+libraries-override:
+  geolocation_google_maps/mapfeature.marker_infowindow:
+    js:
+      js/MapFeature/geolocation-marker-infowindow.js: js/geolocation-marker-infowindow.js
+  geolocation/map_center.client_location:
+    js:
+      js/MapCenter/client-location.js: js/client-location.js
+libraries:
+  - pfrpsg/stylesheet
+  - pfrpsg/scripts

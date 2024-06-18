@@ -1,0 +1,39 @@
+.path-migraine-or-headache {
+  .paragraph--type--basic-paragraph.paragraph--view-mode--default {
+    margin-bottom: 58px;
+
+    @include md {
+      margin-bottom: 12px;
+    }
+  }
+}
+.paragraph--type--basic-paragraph.paragraph--view-mode--migraine-or-headache {
+  background: var(--light);
+  padding: 36px;
+  letter-spacing: -0.015em;
+  .field--name-field-ckeditor {
+    max-width: none;
+    padding: 0;
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      max-width: none;
+      font-size: 40px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+
+  @include md {
+    padding: 57px 0;
+    border-top: 15px solid var(--white);
+    .field--name-field-ckeditor {
+      h1 {
+        font-size: 52px;
+        font-weight: 400;
+      }
+    }
+  }
+}

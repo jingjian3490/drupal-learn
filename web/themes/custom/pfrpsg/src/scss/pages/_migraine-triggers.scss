@@ -1,0 +1,31 @@
+.path-migraine-triggers {
+  .paragraph--type--basic-paragraph {
+    margin-bottom: 40px;
+
+    @include md {
+      margin-bottom: 35px;
+    }
+  }
+  .paragraph--type--image-text-card-collection {
+    .field--name-field-image-with-text-card {
+      .field--name-field-text-card {
+        font-weight: 400;
+      }
+
+      @include md {
+        .container {
+          padding-top: 60px;
+          padding-bottom: 56px;
+          min-height: 254px;
+        }
+        .field--name-field-text-card {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .field--name-field-media-image {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}

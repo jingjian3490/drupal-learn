@@ -1,0 +1,133 @@
+.path-quiz-report {
+  .view-quiz-report {
+    @extend %structure;
+
+    padding-top: 50px;
+    .view-content {
+      overflow-x: auto;
+      position: relative;
+      margin-bottom: 13px;
+
+      table {
+        width: 100%;
+        min-width: 728px;
+        text-align: center;
+        font-weight: 300;
+        border: 1px solid rgb(0 0 0 / 16%);
+      }
+      tbody {
+        tr {
+          &:nth-of-type(odd) {
+            background: rgb(255 255 255 / 32%);
+          }
+        }
+      }
+      th,
+      td {
+        padding: 24px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 1px;
+          height: 50%;
+          background: rgb(0 0 0 / 16%);
+        }
+        &:last-child {
+          &::after {
+            content: none;
+          }
+        }
+      }
+      th {
+        font-family: $font-title;
+        color: var(--black);
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @include md {
+          font-size: 28px;
+        }
+      }
+
+      @include md {
+        margin-bottom: 64px;
+      }
+    }
+  }
+}
+.path-quiz-results {
+  .view-quiz-statistics {
+    @extend %structure;
+
+    padding-top: 40px;
+    .view-header {
+      margin-bottom: 50px;
+    }
+    .view-content {
+      overflow-x: auto;
+      position: relative;
+      margin-bottom: 13px;
+
+      table {
+        width: 100%;
+        min-width: 728px;
+        text-align: center;
+        font-weight: 300;
+        border: 1px solid rgb(0 0 0 / 16%);
+      }
+      tbody {
+        tr {
+          &:nth-of-type(odd) {
+            background: rgb(255 255 255 / 32%);
+          }
+        }
+      }
+      th,
+      td {
+        padding: 24px;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 1px;
+          height: 50%;
+          background: rgb(0 0 0 / 16%);
+        }
+        &:last-child {
+          &::after {
+            content: none;
+          }
+        }
+      }
+      th {
+        font-family: $font-title;
+        color: var(--black);
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @include md {
+          font-size: 28px;
+        }
+      }
+
+      @include md {
+        margin-bottom: 64px;
+      }
+    }
+    .pager .pager__item.is-active a {
+      color: var(--black);
+    }
+    .pager .pager__item a:hover {
+      color: var(--black);
+    }
+  }
+}

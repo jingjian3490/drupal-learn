@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpfrpsg=self.webpackChunkpfrpsg||[]).push([[445],{366:function(e,n,a){a.r(n);var r,i=a(576);r=jQuery,(0,i.q)("what is migraine"),r(".field--name-field-reference-and-gcma a").attr("sc:linkname","what is migraine | content | reference")}}]);

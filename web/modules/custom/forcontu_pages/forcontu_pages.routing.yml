@@ -1,0 +1,27 @@
+forcontu_pages.simple:
+  path: '/forcontu/pages/simple'
+  defaults:
+    _controller: '\Drupal\forcontu_pages\Controller\ForcontuPagesController::build'
+    _title: 'Simple page'
+  requirements:
+    _permission: 'access content'
+forcontu_pages.calculator:
+  path: '/forcontu/pages/calculator/{num1}/{num2}'
+  defaults:
+    _controller: '\Drupal\forcontu_pages\Controller\ForcontuPagesController::calculator'
+    num1: 20
+    num2: 10
+  requirements:
+    _permission: 'access content'
+forcontu_pages.user:
+  path: '/forcontu/pages/user/{user}'
+  defaults:
+    _controller: '\Drupal\forcontu_pages\Controller\ForcontuPagesController::user'
+  requirements:
+    _permission: 'access content'
+forcontu_pages.links:
+  path: '/forcontu/pages/links'
+  defaults:
+    _controller: '\Drupal\forcontu_pages\Controller\ForcontuPagesController::links'
+  requirements:
+    _permission: 'access content'

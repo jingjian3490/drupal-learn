@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpfrpsg=self.webpackChunkpfrpsg||[]).push([[184],{245:function(s,e,p){p.r(e),(0,p(576).q)("types of treatments")}}]);

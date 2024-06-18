@@ -1,0 +1,65 @@
+.text-description {
+  line-height: 22px;
+  padding-left: 16px;
+  padding-right: 16px;
+  p {
+    margin-bottom: 26px;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include md {
+    padding-left: 0;
+    padding-right: 0;
+    p {
+      margin-bottom: 26px;
+      text-align: left;
+    }
+  }
+}
+
+// Normal Description
+.title-description {
+  font-family: $font-title;
+  margin-bottom: 38px;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 16px;
+
+  @include md {
+    max-width: 898px;
+    text-align: left;
+    padding: 0;
+  }
+}
+.paragraph--type--basic-paragraph {
+  .field--name-field-ckeditor {
+    @extend %structure;
+
+    h1 {
+      font-family: $font-title;
+      margin-top: 0;
+      text-align: center;
+      font-size: 40px;
+      line-height: 1;
+      font-weight: 300;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--font-color);
+    }
+
+    @include md {
+      h1 {
+        max-width: 885px;
+        font-size: 74px;
+        text-align: left;
+        padding-bottom: 38px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+}

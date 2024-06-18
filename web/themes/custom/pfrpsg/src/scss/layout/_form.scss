@@ -1,0 +1,46 @@
+label {
+  font-size: 18px;
+  &.error {
+    display: block;
+    text-align: left;
+    color: var(--error-color);
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+.form-control {
+  color: var(--dark);
+}
+
+.form-item select.error,
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border-width: 1px;
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(#f00, 0.25);
+  }
+}
+
+.form-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.description {
+  color: var(--description-color);
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.form-required:after {
+  background: none;
+  content: "*";
+  vertical-align: baseline;
+  width: auto;
+  height: auto;
+  color: var(--error-color);
+}

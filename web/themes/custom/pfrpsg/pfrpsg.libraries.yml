@@ -1,0 +1,27 @@
+stylesheet:
+  version: VERSION
+  css:
+    theme:
+      src/css/iconfont.css: {}
+      build/pfrpsg.css: {}
+scripts:
+  version: VERSION
+  js:
+    build/pfrpsg.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/js-cookie
+    - core/drupalSettings
+
+landing:
+  version: VERSION
+  css:
+    theme:
+      src/css/iconfont.css: {}
+      build/landing.css: {}
+  js:
+    build/landing.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
