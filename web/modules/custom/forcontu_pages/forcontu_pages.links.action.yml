@@ -1,0 +1,16 @@
+forcontu_pages.add_example:
+  route_name: forcontu_pages.add_example
+  route_parameters:
+    node: 123
+  title: 'Add example'
+  options:
+    attributes: {target: _blank}
+  weight: 10
+  appears_on:
+    - system.admin_content
+
+forcontu_pages.link_action1:
+  route_name: forcontu_pages.action1
+  title: 'Add Something link 1'
+  appears_on:
+    - forcontu_pages.links
