@@ -4,14 +4,46 @@ namespace Drupal\forcontu_pages\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Link;
+use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\Url;
+use Drupal\mysql\Driver\Database\mysql\Connection;
 use Drupal\user\UserInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 /**
  * Returns responses for Forcontu pages routes.
  */
 class ForcontuPagesController extends ControllerBase {
+
+  /**
+   * AccountProxy.
+   *
+   * @var \Drupal\Core\Session\AccountProxy
+   */
+  protected $currentUser;
+
+  /**
+   * Connection.
+   *
+   * @var \Drupal\mysql\Driver\Database\mysql\Connection
+   */
+  protected $database;
+
+  public function __construct(AccountProxy $current_user, Connection $database) {
+    $this->currentUser = $current_user;
+    $this->database = $database;
+  }
+
+  /**
+   * T.
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('current_user'),
+      $container->get('database'),
+    );
+  }
 
   /**
    * Builds the response.
@@ -77,7 +109,7 @@ class ForcontuPagesController extends ControllerBase {
   }
 
   /**
-   * Builds the response.
+   * Use item_list theme template.
    */
   public function user(UserInterface $user): array {
     // 可以直接使用 $user 对象.
@@ -164,6 +196,59 @@ class ForcontuPagesController extends ControllerBase {
       '#title' => $this->t('Examples of links:'),
     ];
     return $output;
+  }
+
+  /**
+   * T.
+   */
+  public function tab1() {
+    $output = '<p>' . $this->t('This is the content of Tab 1, this user rose is %role',
+        ['%role' => implode(',', $this->currentUser->getRoles())]) . '</p>';
+
+    if (!$this->currentUser->hasPermission('administer nodes')) {
+      // If ($this->currentUser()->hasPermission('administer nodes')) {.
+      $output .= '<p>' . $this->t('This extra text is only displayed if the current user can administer nodes.') . '</p>';
+    }
+
+    return [
+      '#markup' => $output,
+    ];
+  }
+
+  /**
+   * T.
+   */
+  public function tab2() {
+    return [
+      '#markup' => '<p>' . $this->t('This is the content of Tab 2') . '</p>',
+    ];
+  }
+
+  /**
+   * T.
+   */
+  public function tab3() {
+    return [
+      '#markup' => '<p>' . $this->t('This is the content of Tab 3') . '</p>',
+    ];
+  }
+
+  /**
+   * T.
+   */
+  public function extratab() {
+    return [
+      '#markup' => '<p>' . $this->t('This is the content of the Extra tab') . '</p>',
+    ];
+  }
+
+  /**
+   * T.
+   */
+  public function action1() {
+    return [
+      '#markup' => '<p>' . $this->t('This is the content of Action 1') . '</p>',
+    ];
   }
 
 }
