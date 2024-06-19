@@ -77,3 +77,6 @@ forcontu_pages.action1:
     _controller: '\Drupal\forcontu_pages\Controller\ForcontuPagesController::action1'
   requirements:
     _permission: 'access content'
+
+route_callbacks:
+  - '\Drupal\forcontu_pages\Routing\ForcontuPagesRoutes::routes'

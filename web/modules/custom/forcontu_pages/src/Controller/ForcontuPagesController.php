@@ -4,6 +4,7 @@ namespace Drupal\forcontu_pages\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Link;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountProxy;
 use Drupal\Core\Url;
 use Drupal\mysql\Driver\Database\mysql\Connection;
@@ -30,9 +31,17 @@ class ForcontuPagesController extends ControllerBase {
    */
   protected $database;
 
-  public function __construct(AccountProxy $current_user, Connection $database) {
+  /**
+   * RouteMatchInterface.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $routeMatch;
+
+  public function __construct(AccountProxy $current_user, Connection $database, RouteMatchInterface $routeMatch) {
     $this->currentUser = $current_user;
     $this->database = $database;
+    $this->routeMatch = $routeMatch;
   }
 
   /**
@@ -42,6 +51,7 @@ class ForcontuPagesController extends ControllerBase {
     return new static(
       $container->get('current_user'),
       $container->get('database'),
+      $container->get('current_route_match'),
     );
   }
 
@@ -248,6 +258,15 @@ class ForcontuPagesController extends ControllerBase {
   public function action1() {
     return [
       '#markup' => '<p>' . $this->t('This is the content of Action 1') . '</p>',
+    ];
+  }
+
+  /**
+   * T.
+   */
+  public function contentTypeHelpPage() {
+    return [
+      '#markup' => '<p>' . $this->t('Content for route %route.', ['%route' => $this->routeMatch->getRouteName()]) . '</p>',
     ];
   }
 
