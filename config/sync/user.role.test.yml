@@ -1,0 +1,20 @@
+uuid: 3759c5b8-3371-4088-8a0b-1ce3ee7a5b30
+langcode: en
+status: true
+dependencies:
+  module:
+    - devel
+    - forcontu_pages
+    - system
+    - toolbar
+id: test
+label: Test
+weight: 4
+is_admin: null
+permissions:
+  - 'access calculator'
+  - 'access devel information'
+  - 'access tab2 page'
+  - 'access toolbar'
+  - 'administer themes'
+  - 'switch users'

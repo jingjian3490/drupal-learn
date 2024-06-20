@@ -17,12 +17,18 @@ module:
   datetime: 0
   dblog: 0
   default_content: 0
+  devel: 0
+  devel_generate: 0
+  devel_php: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  forcontu_config: 0
+  forcontu_hello: 0
+  forcontu_pages: 0
   help: 0
   history: 0
   image: 0

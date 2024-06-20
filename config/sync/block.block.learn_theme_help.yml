@@ -10,8 +10,8 @@ _core:
   default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
 id: learn_theme_help
 theme: learn_theme
-region: header
-weight: 0
+region: banner
+weight: 1
 provider: null
 plugin: help_block
 settings:
