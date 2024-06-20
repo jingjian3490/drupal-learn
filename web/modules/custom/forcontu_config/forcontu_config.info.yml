@@ -1,0 +1,5 @@
+name: 'Forcontu Config'
+type: module
+description: 'Learn config api.'
+package: Forcontu
+core_version_requirement: ^10 || ^11

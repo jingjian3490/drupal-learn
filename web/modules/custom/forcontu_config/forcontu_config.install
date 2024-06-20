@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Forcontu config module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function forcontu_config_install(): void {
+  $site_mail = \Drupal::config('system.site')->get('mail');
+  $site_name = \Drupal::config('system.site')->get('name');
+  \Drupal::configFactory()->getEditable('forcontu_config.settings')
+    ->set('newsletter.default_from_email', $site_mail)
+    ->set('newsletter.subject', $site_name)
+    ->save();
+  \Drupal::messenger()->addStatus(t('Module Forcontu config has been installed.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function forcontu_config_uninstall(): void {
+  \Drupal::messenger()->addStatus(t('Module Forcontu config has been uninstalled.'));
+}
