@@ -8,8 +8,8 @@ _core:
   default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
 id: learn_theme_primary_local_tasks
 theme: learn_theme
-region: information
-weight: -4
+region: banner
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:
