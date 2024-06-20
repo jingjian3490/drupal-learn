@@ -1,0 +1,24 @@
+# Schema for the configuration files of the Forcontu Config module.
+forcontu_config.settings:
+  type: config_object
+  label: 'Forcontu Config settings'
+  mapping:
+    newsletter:
+      type: mapping
+      label: 'Newsletter settings'
+      mapping:
+        subject:
+          type: string
+          label: 'Subject'
+        default_from_email:
+          type: email
+          label: 'Default From email'
+        active:
+          type: boolean
+          label: 'If the newsletter is active or not'
+        periodicity:
+          type: string
+          label: 'How often the newsletter is sent (daily, weekly or monthly)'
+        news_number:
+          type: integer
+          label: 'Number of news to include in each newsletter'
