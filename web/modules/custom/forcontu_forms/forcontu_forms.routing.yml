@@ -1,0 +1,7 @@
+forcontu_forms.simple:
+  path: '/forcontu/forms/simple'
+  defaults:
+    _title: 'Simple Form'
+    _form: 'Drupal\forcontu_forms\Form\Simple'
+  requirements:
+    _permission: 'access content'
