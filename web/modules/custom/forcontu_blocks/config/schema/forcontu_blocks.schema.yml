@@ -1,0 +1,11 @@
+block.settings.forcontu_blocks_highlighted_content_block:
+  type: block_settings
+  label: 'Highlighted Content block'
+  mapping:
+    block_message:
+      type: string
+      label: Display message
+    node_number:
+      type: number
+      label: Number of nodes
+

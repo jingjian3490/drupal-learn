@@ -11,7 +11,6 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_alter().
  */
 function forcontu_forms_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
-  dpm($form_id);
   switch ($form_id) {
     case 'system_site_information_settings':
       $form['site_information']['site_slogan']['#required'] = TRUE;
