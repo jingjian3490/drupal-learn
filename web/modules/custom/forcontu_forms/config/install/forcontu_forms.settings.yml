@@ -1,0 +1,4 @@
+message: 'Default message'
+allowed_types:
+  - page
+  - article

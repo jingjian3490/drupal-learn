@@ -28,6 +28,7 @@ forcontu_pages.links:
   requirements:
     _permission: 'access content'
 
+# define top admin manage menu, use system controller \Drupal\system\Controller\SystemController::systemAdminMenuBlockPage
 forcontu_pages.admin_forcontu:
   path: '/admin/forcontu'
   defaults:
@@ -35,6 +36,7 @@ forcontu_pages.admin_forcontu:
     _title: 'Forcontu'
   requirements:
     _access: 'TRUE'
+# define second admin manage menu, use system controller \Drupal\system\Controller\SystemController::systemAdminMenuBlockPage
 forcontu_pages.admin_forcontu_pages:
   path: '/admin/forcontu/forcontu_pages'
   defaults:
