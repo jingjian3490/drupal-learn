@@ -1,0 +1,29 @@
+uuid: 02256227-28ad-41cf-b4f2-fa851a0921eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_blocks
+    - node
+  theme:
+    - pfrpsg
+id: pfrpsg_nodevoting
+theme: pfrpsg
+region: content
+weight: 0
+provider: null
+plugin: forcontu_blocks_node_voting_block
+settings:
+  id: forcontu_blocks_node_voting_block
+  label: 'Node Voting'
+  label_display: visible
+  provider: forcontu_blocks
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page
