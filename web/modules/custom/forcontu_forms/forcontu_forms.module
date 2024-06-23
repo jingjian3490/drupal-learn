@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for forcontu_forms module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function forcontu_forms_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
+  dpm($form_id);
+  switch ($form_id) {
+    case 'system_site_information_settings':
+      $form['site_information']['site_slogan']['#required'] = TRUE;
+      break;
+
+    case 'node_page_form':
+    case 'node_page_edit_form':
+      // 展开选项组.
+      $form['options']['#open'] = TRUE;
+
+      // 添加 highlighted 元素.
+      $form['options']['highlighted'] = [
+        '#type' => 'checkbox',
+        '#title' => t('Highlighted'),
+        '#weight' => 100,
+      ];
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for node_form.
+ */
+function forcontu_forms_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['options']['#open'] = TRUE;
+
+  $form['options']['highlighted'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Highlighted'),
+    '#weight' => 100,
+  ];
+}

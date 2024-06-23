@@ -1,0 +1,12 @@
+forcontu_forms.settings:
+  type: config_object
+  label: 'Forcontu Forms Settings'
+  mapping:
+    message:
+      type: string
+      label: 'Default message'
+    allowed_types:
+      type: sequence    # 指定这是一个序列（数组）。
+      label: 'Allowed content types'
+      sequence:
+        type: string

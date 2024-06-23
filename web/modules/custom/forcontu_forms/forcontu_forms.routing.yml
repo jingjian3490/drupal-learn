@@ -1,3 +1,12 @@
+# define second admin manage menu route, use system controller \Drupal\system\Controller\SystemController::systemAdminMenuBlockPage
+forcontu_forms.admin_forcontu_forms:
+  path: '/admin/forcontu/forcontu_forms'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Forcontu Forms'
+  requirements:
+    _access: 'TRUE'
+
 forcontu_forms.simple:
   path: '/forcontu/forms/simple'
   defaults:
@@ -5,3 +14,19 @@ forcontu_forms.simple:
     _form: 'Drupal\forcontu_forms\Form\Simple'
   requirements:
     _permission: 'access content'
+
+forcontu_forms.settings:
+  path: '/admin/config/development/forcontu'
+  defaults:
+    _title: 'Forcontu Forms'
+    _form: 'Drupal\forcontu_forms\Form\ForcontuSettingsForm'
+  requirements:
+    _permission: 'forcontu form access'
+
+forcontu_forms.confirm:
+  path: '/forcontu/forms/confirm/{node}'
+  defaults:
+    _title: 'Confirm Form'
+    _form: 'Drupal\forcontu_forms\Form\ForcontuConfirmForm'
+  requirements:
+    _permission: 'forcontu form access'
