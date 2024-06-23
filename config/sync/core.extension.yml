@@ -26,7 +26,9 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  forcontu_blocks: 0
   forcontu_config: 0
+  forcontu_forms: 0
   forcontu_hello: 0
   forcontu_pages: 0
   help: 0

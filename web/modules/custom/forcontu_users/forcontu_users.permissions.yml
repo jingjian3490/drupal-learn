@@ -1,0 +1,7 @@
+access user block:
+  title: 'View user block'
+  description: 'View own user block'
+
+configure extra user data:
+  title: 'Configure extra user data'
+  description: 'Allow users to configure extra user data'
