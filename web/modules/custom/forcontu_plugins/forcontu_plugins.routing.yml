@@ -5,3 +5,11 @@ forcontu_plugins.fipsum:
     _title: 'Fipsum Test Page'
   requirements:
     _permission: 'access content'
+
+forcontu_plugins.courses:
+  path: '/forcontu/plugins/courses'
+  defaults:
+    _title: 'List of courses'
+    _controller: '\Drupal\forcontu_plugins\Controller\ForcontuPluginsController::courses'
+  requirements:
+    _permission: 'access content'

@@ -4,6 +4,7 @@ namespace Drupal\forcontu_plugins\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\forcontu_plugins\FipsumPluginManager;
+use Drupal\forcontu_plugins\ForcontuCoursesInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -18,8 +19,16 @@ class ForcontuPluginsController extends ControllerBase {
    */
   protected $fipsum;
 
-  public function __construct(FipsumPluginManager $fipsum) {
+  /**
+   * T.
+   *
+   * @var \Drupal\forcontu_plugins\ForcontuCoursesInterface
+   */
+  protected $forcontuCourses;
+
+  public function __construct(FipsumPluginManager $fipsum, ForcontuCoursesInterface $forcontu_courses) {
     $this->fipsum = $fipsum;
+    $this->forcontuCourses = $forcontu_courses;
   }
 
   /**
@@ -27,7 +36,8 @@ class ForcontuPluginsController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('plugin.manager.fipsum')
+      $container->get('plugin.manager.fipsum'),
+       $container->get('forcontu.courses'),
     );
   }
 
@@ -55,6 +65,22 @@ class ForcontuPluginsController extends ControllerBase {
       '#markup' => '<p>' . $forcontu_ipsum->generate(600) . '</p>',
     ];
 
+    return $build;
+  }
+
+  /**
+   * T.
+   */
+  public function courses() {
+    $list = $this->forcontuCourses->getCourses();
+
+    $header = [$this->t('Title'), $this->t('Tutor'), $this->t('Duration (months)'), $this->t('Hours')];
+
+    $build['forcontu_plugins_table'] = [
+      '#type' => 'table',
+      '#header' => $header,
+      '#rows' => $list,
+    ];
     return $build;
   }
 
