@@ -1,0 +1,7 @@
+forcontu_plugins.fipsum:
+  path: '/forcontu/plugins/fipsum'
+  defaults:
+    _controller: '\Drupal\forcontu_plugins\Controller\ForcontuPluginsController::fipsum'
+    _title: 'Fipsum Test Page'
+  requirements:
+    _permission: 'access content'
