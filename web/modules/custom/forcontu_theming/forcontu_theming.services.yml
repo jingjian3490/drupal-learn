@@ -1,0 +1,6 @@
+services:
+  forcontu_theming.twig_extension:
+    class: Drupal\forcontu_theming\TwigExtension\ForcontuThemingTwigExtension
+    arguments: ['@current_user']
+    tags:
+      - { name: twig.extension }
