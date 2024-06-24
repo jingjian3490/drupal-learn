@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ */
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Primary module hooks for Forcontu Theming module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function forcontu_theming_theme($existing, $type, $theme, $path) {
+  return [
+    'forcontu_theming_dimensions' => [
+      'variables' => [
+        'length' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+        'unit' => 'cm.',
+      ],
+      'template' => 'forcontu-theming-dimensions',
+    ],
+    'custom_render_element' => [
+      'variables' => [
+        'length' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+        'unit' => 'cm.',
+      ],
+      'template' => 'custom-render-element-dimensions',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for HOOK 'forcontu_theming_dimensions'.
+ */
+function forcontu_theming_theme_suggestions_forcontu_theming_dimensions_alter(array &$suggestions, array $variables) {
+  if (\Drupal::currentUser()->isAnonymous()) {
+    $suggestions[] = 'forcontu_theming_dimensions__not_logged_in';
+  }
+  else {
+    $suggestions[] = 'forcontu_theming_dimensions__logged_in';
+  }
+}

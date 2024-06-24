@@ -1,0 +1,16 @@
+# define second admin manage menu, use system controller \Drupal\system\Controller\SystemController::systemAdminMenuBlockPage
+forcontu_theming.admin_forcontu_render:
+  path: '/admin/forcontu/forcontu_render'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Forcontu Render'
+  requirements:
+    _access: 'TRUE'
+
+forcontu_theming.render:
+  path: '/forcontu/theming/render'
+  defaults:
+    _title: 'Render'
+    _controller: '\Drupal\forcontu_theming\Controller\ForcontuThemingController::render'
+  requirements:
+    _permission: 'access content'
