@@ -1,0 +1,4 @@
+services:
+  plugin.manager.fipsum:
+    class: Drupal\forcontu_plugins\FipsumPluginManager
+    parent: default_plugin_manager

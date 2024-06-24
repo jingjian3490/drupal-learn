@@ -1,0 +1,5 @@
+name: '`Forcontu Plugins`'
+type: module
+description: 'Learn custom plugin'
+package: Forcontu
+core_version_requirement: ^10 || ^11
