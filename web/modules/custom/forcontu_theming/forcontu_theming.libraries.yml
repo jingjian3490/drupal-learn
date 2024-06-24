@@ -1,0 +1,5 @@
+forcontu_theming.css:
+  version: 1.x
+  css:
+    theme:
+      css/forcontu_theming.css: {}
