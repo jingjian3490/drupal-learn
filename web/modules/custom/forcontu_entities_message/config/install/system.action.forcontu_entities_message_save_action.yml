@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_entities_message
+id: forcontu_entities_message_save_action
+label: 'Save messages'
+type: forcontu_entities_message
+plugin: entity:save_action:forcontu_entities_message
+configuration: {  }

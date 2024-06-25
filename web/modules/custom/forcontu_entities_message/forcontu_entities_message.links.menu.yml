@@ -1,0 +1,11 @@
+entity.forcontu_entities_message_type.collection:
+  title: 'Message types'
+  description: 'Manage and CRUD actions on Message type.'
+  parent: system.admin_structure
+  route_name: entity.forcontu_entities_message_type.collection
+
+entity.forcontu_entities_message.collection:
+  title: 'Messages'
+  description: 'List of messages.'
+  route_name: entity.forcontu_entities_message.collection
+  parent: system.admin_content

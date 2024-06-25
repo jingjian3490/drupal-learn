@@ -1,0 +1,12 @@
+administer forcontu_entities_message types:
+  title: 'Administer message types'
+  description: 'Maintain the types of forcontu entities message entity.'
+  restrict access: true
+view forcontu_entities_message:
+  title: 'View message'
+edit forcontu_entities_message:
+  title: 'Edit message'
+delete forcontu_entities_message:
+  title: 'Delete message'
+create forcontu_entities_message:
+  title: 'Create message'
