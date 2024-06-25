@@ -28,6 +28,7 @@ module:
   filter: 0
   forcontu_blocks: 0
   forcontu_config: 0
+  forcontu_entities: 0
   forcontu_forms: 0
   forcontu_hello: 0
   forcontu_pages: 0
@@ -36,9 +37,7 @@ module:
   help: 0
   history: 0
   image: 0
-  language: 0
   link: 0
-  locale: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
