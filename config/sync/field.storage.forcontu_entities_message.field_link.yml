@@ -1,0 +1,19 @@
+uuid: 4b13080f-a8b5-44ad-899e-a58d9e0dc918
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_entities_message
+    - link
+id: forcontu_entities_message.field_link
+field_name: field_link
+entity_type: forcontu_entities_message
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

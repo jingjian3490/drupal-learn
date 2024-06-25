@@ -1,0 +1,23 @@
+uuid: 2afcebb6-44c4-48fc-aa98-488806498ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forcontu_entities_message.field_link
+    - forcontu_entities_message.forcontu_entities_message_type.test
+  module:
+    - link
+id: forcontu_entities_message.test.field_link
+field_name: field_link
+entity_type: forcontu_entities_message
+bundle: test
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

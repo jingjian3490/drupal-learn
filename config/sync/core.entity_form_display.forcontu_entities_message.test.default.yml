@@ -1,0 +1,68 @@
+uuid: ddcc20c2-2c0c-46bb-9cf6-71fa0bb6e3fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forcontu_entities_message.test.field_color
+    - field.field.forcontu_entities_message.test.field_link
+    - forcontu_entities_message.forcontu_entities_message_type.test
+  module:
+    - link
+    - text
+id: forcontu_entities_message.test.default
+targetEntityType: forcontu_entities_message
+bundle: test
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 21
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  content: true
+  user_id: true
+  user_to: true
