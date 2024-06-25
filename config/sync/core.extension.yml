@@ -29,6 +29,8 @@ module:
   forcontu_blocks: 0
   forcontu_config: 0
   forcontu_entities: 0
+  forcontu_entities_message: 0
+  forcontu_field: 0
   forcontu_forms: 0
   forcontu_hello: 0
   forcontu_pages: 0

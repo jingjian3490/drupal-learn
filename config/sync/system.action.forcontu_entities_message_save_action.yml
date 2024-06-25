@@ -1,0 +1,13 @@
+uuid: 8761c05f-e127-41eb-8c32-fbd9a9a1bb2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_entities_message
+_core:
+  default_config_hash: Or8lPXwdOnpIU52ZIwsEKcrZIH4UzBBOGPIX8L5FcLk
+id: forcontu_entities_message_save_action
+label: 'Save messages'
+type: forcontu_entities_message
+plugin: 'entity:save_action:forcontu_entities_message'
+configuration: {  }
