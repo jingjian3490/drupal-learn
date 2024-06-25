@@ -1,0 +1,10 @@
+entity.forcontu_entities_message.edit_form:
+  route_name: entity.forcontu_entities_message.edit_form
+  group: forcontu_entities_message
+  title: 'Edit'
+
+entity.forcontu_entities_message.delete_form:
+  route_name: entity.forcontu_entities_message.delete_form
+  group: forcontu_entities_message
+  title: 'Delete'
+  weight: 10

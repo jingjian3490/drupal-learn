@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_entities_message
+id: forcontu_entities_message_delete_action
+label: 'Delete messages'
+type: forcontu_entities_message
+plugin: entity:delete_action:forcontu_entities_message
+configuration: {  }
