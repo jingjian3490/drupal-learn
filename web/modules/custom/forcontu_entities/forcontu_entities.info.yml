@@ -1,0 +1,5 @@
+name: 'Forcontu Entities'
+type: module
+description: 'Learn create custom entity.'
+package: Forcontu
+core_version_requirement: ^10 || ^11
