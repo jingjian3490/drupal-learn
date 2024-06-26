@@ -1,0 +1,21 @@
+uuid: 994c2bcd-4935-443a-9762-f207993edb0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forcontu_entities_message.field_test_color
+    - forcontu_entities_message.forcontu_entities_message_type.test
+  module:
+    - field_example
+id: forcontu_entities_message.test.field_test_color
+field_name: field_test_color
+entity_type: forcontu_entities_message
+bundle: test
+label: 'Test color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_example_rgb

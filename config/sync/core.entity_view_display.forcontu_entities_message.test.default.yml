@@ -5,42 +5,24 @@ dependencies:
   config:
     - field.field.forcontu_entities_message.test.field_color
     - field.field.forcontu_entities_message.test.field_link
+    - field.field.forcontu_entities_message.test.field_test_color
     - forcontu_entities_message.forcontu_entities_message_type.test
   module:
+    - field_example
     - forcontu_field
     - link
     - text
-    - user
 id: forcontu_entities_message.test.default
 targetEntityType: forcontu_entities_message
 bundle: test
 mode: default
 content:
-  created:
-    type: timestamp
-    label: above
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-      tooltip:
-        date_format: long
-        custom_date_format: ''
-      time_diff:
-        enabled: false
-        future_format: '@interval hence'
-        past_format: '@interval ago'
-        granularity: 2
-        refresh: 60
-    third_party_settings: {  }
-    weight: 20
-    region: content
   description:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
   field_color:
     type: forcontu_entities_simple_text
@@ -48,7 +30,7 @@ content:
     settings:
       formatter_tag: div
     third_party_settings: {  }
-    weight: 22
+    weight: 3
     region: content
   field_link:
     type: link
@@ -60,7 +42,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 21
+    weight: 2
+    region: content
+  field_test_color:
+    type: field_example_simple_text
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   subject:
     type: string
@@ -68,16 +57,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -4
-    region: content
-  uid:
-    type: author
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 15
+    weight: 0
     region: content
 hidden:
   content: true
+  created: true
+  uid: true
   user_id: true
   user_to: true

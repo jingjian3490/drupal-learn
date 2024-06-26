@@ -22,7 +22,9 @@ module:
   devel_php: 0
   dynamic_page_cache: 0
   editor: 0
+  examples: 0
   field: 0
+  field_example: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -31,6 +33,8 @@ module:
   forcontu_entities: 0
   forcontu_entities_message: 0
   forcontu_field: 0
+  forcontu_files: 0
+  forcontu_filters: 0
   forcontu_forms: 0
   forcontu_hello: 0
   forcontu_pages: 0
