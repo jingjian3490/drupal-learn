@@ -1,0 +1,5 @@
+name: 'Forcontu Filters'
+type: module
+description: 'Learn custom filter.'
+package: Forcontu
+core_version_requirement: ^10 || ^11
