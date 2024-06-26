@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - editor
+    - forcontu_filters
 _core:
   default_config_hash: vpZysv3RHJjhYzq7O_q5q8mVlHdrSzKELmXyiX6RtV0
 name: 'Full HTML'
@@ -22,12 +23,28 @@ filters:
     status: true
     weight: 8
     settings: {  }
+  filter_black_list:
+    id: filter_black_list
+    provider: forcontu_filters
+    status: true
+    weight: 0
+    settings:
+      black_list: "jiBa \r\nBB\r\ndd\r\nxsss    \r\nxx\r\n\r\n55"
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
     weight: 9
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
