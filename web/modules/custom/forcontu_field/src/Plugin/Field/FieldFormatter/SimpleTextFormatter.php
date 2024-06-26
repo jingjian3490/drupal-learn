@@ -49,7 +49,7 @@ final class SimpleTextFormatter extends FormatterBase {
         '#type' => 'html_tag',
         '#tag' => $this->getSetting('formatter_tag'),
         '#attributes' => [
-          'style' => 'color: ' . $item->value,
+          'style' => 'color: #' . $item->value,
         ],
         '#value' => $this->t('The color code in this field is @code', ['@code' => $item->value]),
       ];
