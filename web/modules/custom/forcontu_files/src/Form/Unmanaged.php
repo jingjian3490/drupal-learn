@@ -2,6 +2,7 @@
 
 namespace Drupal\forcontu_files\Form;
 
+use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -55,9 +56,19 @@ final class Unmanaged extends FormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state): void {
-    $this->messenger()->addStatus($this->t('The message has been sent.'));
-    $form_state->setRedirect('<front>');
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+    $file_system = \Drupal::service('file_system');
+    $directory = 'public://unmanaged';
+    $file_system->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY);
+
+    $destination = $directory . '/unmanaged.pdf';
+
+    if ($file_system->saveData($form_state->getValue('upload'), $destination)) {
+      \Drupal::messenger()->addMessage($this->t('File Uploaded'));
+    }
+    else {
+      \Drupal::messenger()->addMessage($this->t('Error'));
+    }
   }
 
 }
