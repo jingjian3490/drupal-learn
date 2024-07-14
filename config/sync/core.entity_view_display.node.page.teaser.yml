@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.field_country
     - node.type.page
   module:
     - text
@@ -28,4 +29,4 @@ content:
     weight: 101
     region: content
 hidden:
-  langcode: true
+  field_country: true

@@ -72,3 +72,37 @@ function forcontu_forms_schema(): array {
   ];
   return $schema;
 }
+
+/**
+ * Implements hook_update_N().
+ */
+function forcontu_forms_update_10001(&$sandbox) {
+
+  // 获取数据库连接。.
+  $schema = \Drupal::database()->schema();
+
+  // 检查表是否已存在。.
+  if (!$schema->tableExists('forcontu_node_highlighted')) {
+    // 定义表结构。.
+    $schema->createTable('forcontu_node_highlighted', [
+      'fields' => [
+        'nid' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'description' => 'Node ID',
+        ],
+        'highlighted' => [
+          'type' => 'int',
+          'size' => 'tiny',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => 'Highlighted flag (0 or 1)',
+        ],
+      ],
+      'primary key' => ['nid'],
+    ]);
+
+    // 添加索引（如果需要，可以根据你的需求添加索引）。
+    // $schema->addIndex('forcontu_node_highlighted', 'nid');.
+  }
+}
