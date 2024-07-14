@@ -40,10 +40,13 @@ module:
   forcontu_pages: 0
   forcontu_plugins: 0
   forcontu_theming: 0
+  forcontu_views: 0
   help: 0
   history: 0
   image: 0
   link: 0
+  media: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0

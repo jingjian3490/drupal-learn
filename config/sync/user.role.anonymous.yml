@@ -9,6 +9,7 @@ dependencies:
     - contact
     - filter
     - forcontu_pages
+    - media
     - search
     - system
 _core:
@@ -25,3 +26,4 @@ permissions:
   - 'access tab2 page'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'

@@ -6,6 +6,7 @@ toolbar_items:
   - devel.route_info.item
   - devel.admin_settings_link
   - devel_php.execute_php
+  - devel_generate.generate2
   - devel.reinstall
   - devel.run_cron
   - devel.switch_user
