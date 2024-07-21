@@ -32,6 +32,7 @@ module:
   forcontu_config: 0
   forcontu_entities: 0
   forcontu_entities_message: 0
+  forcontu_events: 0
   forcontu_field: 0
   forcontu_files: 0
   forcontu_filters: 0

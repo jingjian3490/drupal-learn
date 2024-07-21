@@ -1,0 +1,17 @@
+services:
+  forcontu_events.event_config_subscriber:
+    class: Drupal\forcontu_events\EventSubscriber\ForcontuEventsConfigSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
+
+  forcontu_events.event_users_subscriber:
+    class: Drupal\forcontu_events\EventSubscriber\ForcontuEventsUsersSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }
+
+  forcontu_events.route_subscriber:
+    class: Drupal\forcontu_events\Routing\ForcontuEventsRouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,7 @@
+forcontu_events.example:
+  path: '/forcontu-events/user'
+  defaults:
+    _title: 'User login'
+    _controller: '\Drupal\forcontu_events\Controller\ForcontuEventsController'
+  requirements:
+    _permission: 'access content'
