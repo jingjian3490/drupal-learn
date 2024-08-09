@@ -1,0 +1,6 @@
+forcontu_jquery.fadeout:
+  js:
+    js/forcontu_jquery_fadeout.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
