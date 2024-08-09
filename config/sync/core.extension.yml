@@ -38,6 +38,7 @@ module:
   forcontu_filters: 0
   forcontu_forms: 0
   forcontu_hello: 0
+  forcontu_jquery: 0
   forcontu_pages: 0
   forcontu_plugins: 0
   forcontu_theming: 0

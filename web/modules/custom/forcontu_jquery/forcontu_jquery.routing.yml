@@ -1,0 +1,23 @@
+forcontu_jquery.fadeout:
+  path: '/forcontu/jquery/fadeout'
+  defaults:
+    _title: 'Fade out example'
+    _controller: '\Drupal\forcontu_jquery\Controller\ForcontuJqueryController::fadeout'
+  requirements:
+    _permission: 'access content'
+
+forcontu_jquery.learn_base:
+  path: '/forcontu/jquery/base'
+  defaults:
+    _title: 'Fade out example'
+    _controller: '\Drupal\forcontu_jquery\Controller\ForcontuJqueryController::base'
+  requirements:
+    _permission: 'access content'
+
+forcontu_jquery.states:
+  path: '/forcontu/forms/states'
+  defaults:
+    _title: 'States'
+    _form: 'Drupal\forcontu_jquery\Form\States'
+  requirements:
+    _permission: 'access content'
