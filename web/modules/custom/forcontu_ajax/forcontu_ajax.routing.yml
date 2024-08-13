@@ -1,0 +1,39 @@
+forcontu_ajax.link:
+  path: '/forcontu/ajax/link'
+  defaults:
+    _controller: '\Drupal\forcontu_ajax\Controller\ForcontuAjaxController::link'
+    _title: 'Ajax link example'
+  requirements:
+    _permission: 'access content'
+
+forcontu_ajax.link_callback:
+  path: '/forcontu/ajax/link-callback'
+  defaults:
+    _controller: '\Drupal\forcontu_ajax\Controller\ForcontuAjaxController::linkCallback'
+    _title: 'Ajax link example callback'
+  requirements:
+    _permission: 'access content'
+
+forcontu_ajax.form:
+  path: '/forcontu/ajax/form'
+  defaults:
+    _form: '\Drupal\forcontu_ajax\Form\AjaxForm'
+    _title: 'Ajax Form Example'
+  requirements:
+    _permission: 'access content'
+
+forcontu_ajax.form_autocomplete:
+  path: '/forcontu/ajax/form/autocomplete'
+  defaults:
+    _form: '\Drupal\forcontu_ajax\Form\AutocompleteForm'
+    _title: 'Autocomplete Form Example'
+  requirements:
+    _permission: 'access content'
+
+forcontu_ajax.user_autocomplete:
+  path: '/forcontu/ajax/user_autocomplete/{role}'
+  defaults:
+    _controller: '\Drupal\forcontu_ajax\Controller\ForcontuAjaxAutocompleteController::userAutocomplete'
+    _title: 'User autocomplete'
+  requirements:
+    _permission: 'access content'

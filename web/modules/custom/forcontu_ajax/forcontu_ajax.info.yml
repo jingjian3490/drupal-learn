@@ -1,0 +1,5 @@
+name: 'Forcontu Ajax'
+type: module
+description: 'Forcontu Ajax'
+package: Forcontu
+core_version_requirement: ^10 || ^11

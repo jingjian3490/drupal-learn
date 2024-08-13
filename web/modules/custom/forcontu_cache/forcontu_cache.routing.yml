@@ -1,0 +1,7 @@
+forcontu_cache.default:
+  path: '/forcontu/cache/default'
+  defaults:
+    _title: 'Cache Default'
+    _controller: '\Drupal\forcontu_cache\Controller\ForcontuCacheDefaultController::build'
+  requirements:
+    _permission: 'access content'

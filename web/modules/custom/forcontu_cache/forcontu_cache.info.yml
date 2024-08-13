@@ -1,0 +1,5 @@
+name: 'Forcontu Cache'
+type: module
+description: 'Forcontu Cache'
+package: Forcontu
+core_version_requirement: ^10 || ^11
