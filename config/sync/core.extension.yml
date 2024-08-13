@@ -28,7 +28,9 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  forcontu_ajax: 0
   forcontu_blocks: 0
+  forcontu_cache: 0
   forcontu_config: 0
   forcontu_entities: 0
   forcontu_entities_message: 0
