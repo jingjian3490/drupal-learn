@@ -25,6 +25,7 @@
         "drupal/devel": "^5.0",
         "drupal/devel_php": "^1.7",
         "drupal/examples": "^4.0",
+        "drupal/social_auth_google": "^4.0",
         "drupal/ultimate_cron": "^2.0@alpha",
         "drush/drush": "^12.5"
     },

@@ -30,3 +30,11 @@ forcontu_forms.confirm:
     _form: 'Drupal\forcontu_forms\Form\ForcontuConfirmForm'
   requirements:
     _permission: 'forcontu form access'
+
+forcontu_forms.simple_login:
+  path: '/forcontu/forms/simple-login'
+  defaults:
+    _title: 'Simple Login Form'
+    _form: 'Drupal\forcontu_forms\Form\SimpleLoginTestForm'
+  requirements:
+    _permission: 'access content'
