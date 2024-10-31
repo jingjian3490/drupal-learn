@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Forcontu Queues module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert for 'node' entity.
+ */
+function forcontu_queues_node_insert(EntityInterface $entity) {
+  $queue = \Drupal::service('queue')->get('node_reverse_titles');
+
+  $data['id'] = $entity->id();
+  $data['title'] = $entity->getTitle();
+
+  $queue->createItem($data);
+  $count = $queue->numberOfItems();
+
+  \Drupal::messenger()
+    ->addMessage(t('Node @nid added to the queue. Items in the queue: @count', [
+      '@nid' => $entity->id(),
+      '@count' => $count,
+    ]));
+}
