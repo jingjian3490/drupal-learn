@@ -63,6 +63,9 @@
 /drupal.phar
 /drupal
 
+####### Ignore unit test.
+web/sites/simpletest/
+
 ####### Custom.
 !/web/sites/default/settings.php
 
