@@ -43,6 +43,7 @@ module:
   forcontu_jquery: 0
   forcontu_pages: 0
   forcontu_plugins: 0
+  forcontu_queues: 0
   forcontu_theming: 0
   forcontu_views: 0
   help: 0
@@ -60,6 +61,7 @@ module:
   path: 0
   path_alias: 0
   queue_example: 0
+  queue_ui: 0
   search: 0
   shortcut: 0
   social_api: 0

@@ -1,5 +1,5 @@
-name: 'Forcontu Plugins'
+name: 'Forcontu Queues'
 type: module
-description: 'Learn custom plugin'
+description: 'Learn queues'
 package: Forcontu
 core_version_requirement: ^10 || ^11

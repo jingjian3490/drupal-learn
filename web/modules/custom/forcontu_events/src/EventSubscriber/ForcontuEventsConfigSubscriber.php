@@ -32,18 +32,18 @@ final class ForcontuEventsConfigSubscriber implements EventSubscriberInterface {
    * T.
    */
   public function onConfigSave(ConfigCrudEvent $event) {
-    $this->messenger->addStatus("Event: " . __FUNCTION__);
+    // $this->messenger->addStatus("Event: " . __FUNCTION__);
     $config = $event->getConfig();
-    $this->messenger->addStatus("Config: " . $config->getName());
+    // $this->messenger->addStatus("Config: " . $config->getName());
   }
 
   /**
    * T.
    */
   public function onConfigDelete(ConfigCrudEvent $event) {
-    $this->messenger->addStatus("Event: " . __FUNCTION__);
+    // $this->messenger->addStatus("Event: " . __FUNCTION__);
     $config = $event->getConfig();
-    $this->messenger->addStatus("Config: " . $config->getName());
+    // $this->messenger->addStatus("Config: " . $config->getName());
   }
 
   /**
