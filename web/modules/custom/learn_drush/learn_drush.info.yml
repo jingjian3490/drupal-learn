@@ -1,0 +1,5 @@
+name: 'Learn drush'
+type: module
+description: 'Learn drush.'
+package: Learn
+core_version_requirement: ^10 || ^11

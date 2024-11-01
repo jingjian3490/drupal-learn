@@ -32,6 +32,7 @@ module:
   forcontu_blocks: 0
   forcontu_cache: 0
   forcontu_config: 0
+  forcontu_drush: 0
   forcontu_entities: 0
   forcontu_entities_message: 0
   forcontu_events: 0
@@ -49,6 +50,7 @@ module:
   help: 0
   history: 0
   image: 0
+  learn_drush: 0
   link: 0
   media: 0
   media_library: 0
