@@ -6,6 +6,12 @@
  or your current system user. See core/tests/README.md and
  https://www.drupal.org/node/2116263 for details.
 -->
+
+<!--  Ensure testing dependencies are installed: composer require drupal/core-dev - -dev - -update-with-all-dependencies  -->
+<!--  Ensure testing dependencies are installed: composer require drupal/core-dev - -dev - -update-with-all-dependencies  -->
+<!--  Ensure testing dependencies are installed: composer require drupal/core-dev - -dev - -update-with-all-dependencies  -->
+
+
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          bootstrap="./web/core/tests/bootstrap.php" colors="true"
          beStrictAboutTestsThatDoNotTestAnything="true"
