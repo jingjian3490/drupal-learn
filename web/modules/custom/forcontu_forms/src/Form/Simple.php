@@ -2,6 +2,7 @@
 
 namespace Drupal\forcontu_forms\Form;
 
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Database\Connection;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -53,7 +54,6 @@ class Simple extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
-
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
@@ -124,6 +124,84 @@ class Simple extends FormBase {
     ];
     $form['field_color'] = $element;
 
+    $form['fields_wrapper'] = [
+      '#type' => 'container',
+      '#attributes' => ['id' => 'med-form-fields-wrapper'],
+    ];
+
+    $form['fields_wrapper']['switched_to'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('<span class="form-required">Have you switched to another treatment?</span>'),
+      '#options' => [
+        1 => $this->t('Yes'),
+        0 => $this->t('No'),
+      ],
+      '#attributes' => [
+        'class' => ['drupal-ajax'],
+      ],
+    ];
+
+    // $form['fields_wrapper']['field_previous_treatment'] = [
+    //      '#type' => 'container',
+    //      '#children' => 'Test text 1',
+    //      '#states' => [
+    //        'visible' => [
+    //          ':input[name="switched_to"]' => ['value' => 1],
+    //        ],
+    //      ],
+    //    ];
+    //    $form['fields_wrapper']['field_previous_treatment_no'] = [
+    //      '#type' => 'container',
+    //      '#children' => 'Test text 2',
+    //      '#states' => [
+    //        'visible' => [
+    //          ':input[name="switched_to"]' => ['value' => 0],
+    //        ],
+    //      ],
+    //    ];
+    //    $form['field_previous_treatment'] = [
+    //      '#type' => 'container',
+    //      '#children' => 'Test text 1',
+    //      '#states' => [
+    //        'visible' => [
+    //          ':input[name="switched_to"]' => ['value' => 5],
+    //        ],
+    //      ],
+    //    ];
+    //    $form['field_previous_treatment_no'] = [
+    //      '#type' => 'container',
+    //      '#children' => 'Test text 2',
+    //      '#states' => [
+    //        'visible' => [
+    //          ':input[name="switched_to"]' => ['value' => 5],
+    //        ],
+    //      ],
+    //    ];
+    $form['#attached']['library'][] = 'core/drupal.states';
+    $form['field_previous_treatment1'] = [
+      '#type' => 'item',
+      '#markup' => 'Test text 11',
+      '#wrapper_attributes' => [
+        'data-drupal-states' => Json::encode([
+          'visible' => [
+            ':input[name="switched_to"]' => ['value' => 1],
+          ],
+        ]),
+      ],
+    ];
+
+    $form['field_previous_treatment_no1'] = [
+      '#type' => 'item',
+      '#markup' => 'Test text 21',
+      '#wrapper_attributes' => [
+        'data-drupal-states' => Json::encode([
+          'visible' => [
+            ':input[name="switched_to"]' => ['value' => 0],
+          ],
+        ]),
+      ],
+    ];
+
     $form['actions'] = [
       '#type' => 'actions',
     ];
@@ -131,6 +209,28 @@ class Simple extends FormBase {
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
     ];
+
+    $arr = [1, 2, 3, 4];
+    foreach ($arr as &$value) {
+      $value = $value * 2;
+    }
+
+    unset($value);
+    foreach ($arr as $key => $value) {
+      echo "{$key} => {$value} ";
+      print_r($arr);
+      $form[$key] = [
+        '#type' => 'textfield',
+        '#title' => $key,
+        '#default_value' => $value,
+      ];
+      $form['arr' . $key] = [
+        '#type' => 'markup',
+        '#markup' => '<pre>' . print_r($arr, TRUE) . '</pre>',
+      ];
+    }
+
+    $aaa = 4;
 
     return $form;
   }
@@ -150,7 +250,6 @@ class Simple extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
-
     if ($form_state->getValue('title') != '1') {
       $color = $form_state->getValue('color');
       $color1 = $form_state->getValue('color1');
@@ -173,12 +272,14 @@ class Simple extends FormBase {
       ])
       ->execute();
 
-    $this->messenger()->addMessage($this->t('The form has been submitted correctly'));
+    $this->messenger()
+      ->addMessage($this->t('The form has been submitted correctly'));
 
-    $this->logger('forcontu_forms')->notice('New Simple Form entry from user %username inserted: %title.', [
-      '%username' => $form_state->getValue('username'),
-      '%title' => $form_state->getValue('title'),
-    ]);
+    $this->logger('forcontu_forms')
+      ->notice('New Simple Form entry from user %username inserted: %title.', [
+        '%username' => $form_state->getValue('username'),
+        '%title' => $form_state->getValue('title'),
+      ]);
 
     $form_state->setRedirect('forcontu_pages.simple');
   }

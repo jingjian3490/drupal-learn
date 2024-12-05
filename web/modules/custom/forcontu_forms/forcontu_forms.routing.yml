@@ -14,6 +14,8 @@ forcontu_forms.simple:
     _form: 'Drupal\forcontu_forms\Form\Simple'
   requirements:
     _permission: 'access content'
+  options:
+    no_cache: TRUE
 
 forcontu_forms.settings:
   path: '/admin/config/development/forcontu'
