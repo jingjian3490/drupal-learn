@@ -1,0 +1,5 @@
+services:
+  send_email_bulk_action.send_email_event_subscriber:
+    class: Drupal\send_email_bulk_action\EventSubscriber\SendEmailEventSubscriber
+    tags:
+      - { name: event_subscriber }

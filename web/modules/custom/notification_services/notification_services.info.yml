@@ -1,0 +1,9 @@
+name: Notification Services
+description: 'Provide notification services.'
+type: module
+package: Custom
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - node
+  - drupal:system

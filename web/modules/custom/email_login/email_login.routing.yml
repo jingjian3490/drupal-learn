@@ -1,0 +1,7 @@
+email_login.form:
+  path: '/user/email-login'
+  defaults:
+    _form: '\Drupal\email_login\Form\EmailLoginForm'
+    _title: 'Email 登录'
+  requirements:
+    _access: 'TRUE'

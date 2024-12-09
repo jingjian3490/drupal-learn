@@ -1,0 +1,7 @@
+name: 'Send Email Bulk Action'
+type: module
+description: 'Adds a bulk action to send emails to selected users in the User View.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:user

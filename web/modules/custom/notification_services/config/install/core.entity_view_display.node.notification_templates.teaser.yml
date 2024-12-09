@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.notification_templates.field_attachment
+    - field.field.node.notification_templates.field_email_content
+    - field.field.node.notification_templates.field_email_subject
+    - field.field.node.notification_templates.field_template_key
+    - node.type.notification_templates
+  module:
+    - user
+id: node.notification_templates.teaser
+targetEntityType: node
+bundle: notification_templates
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachment: true
+  field_email_content: true
+  field_email_subject: true
+  field_template_key: true

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * T.
+ */
+
+/**
+ * Implements hook_mail().
+ */
+function email_login_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'send_code':
+      $message['subject'] = t('您的登录验证码');
+      $message['body'][] = t('您好 @username，', ['@username' => $params['username']]);
+      $message['body'][] = t('您的登录验证码是：@code', ['@code' => $params['code']]);
+      $message['body'][] = t('该验证码将在15分钟后过期。', []);
+      $message['body'][] = t('如果您没有请求此验证码，请忽略此邮件。', []);
+      break;
+  }
+}
