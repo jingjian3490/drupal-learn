@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_content
+    - node.type.notification_templates
+  module:
+    - text
+id: node.notification_templates.field_email_content
+field_name: field_email_content
+entity_type: node
+bundle: notification_templates
+label: 'Email Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_key
+    - node.type.notification_templates
+id: node.notification_templates.field_template_key
+field_name: field_template_key
+entity_type: node
+bundle: notification_templates
+label: 'Template key'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

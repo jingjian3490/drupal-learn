@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Email Login module.
+ */
+
+use Drupal\Core\Datetime\DrupalDateTime;
+
+/**
+ * Implements hook_schema().
+ */
+function email_login_schema() {
+  $schema['email_login_codes'] = [
+    'description' => '存储用户登录验证码。',
+    'fields' => [
+      'uid' => [
+        'description' => '用户ID。',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'code' => [
+        'description' => '验证码。',
+        'type' => 'varchar',
+        'length' => 6,
+        'not null' => TRUE,
+      ],
+      'expires' => [
+        'description' => '验证码过期时间。',
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['uid'],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install().
+ */
+function email_login_install() {
+  \Drupal::database()->schema()->createTable('email_login_codes', email_login_schema()['email_login_codes']);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function email_login_uninstall() {
+  \Drupal::database()->schema()->dropTable('email_login_codes');
+}
+
+/**
+ * Implements hook_cron().
+ */
+function email_login_cron() {
+  $now = (new DrupalDateTime())->format('Y-m-d H:i:s');
+  $deleted = \Drupal::database()->delete('email_login_codes')
+    ->condition('expires', $now, '<')
+    ->execute();
+
+  if ($deleted) {
+    \Drupal::logger('email_login')->notice('@count 过期的验证码记录已被清理。', ['@count' => $deleted]);
+  }
+}
