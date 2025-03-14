@@ -1,0 +1,16 @@
+uuid: 39e74cb5-ae23-42c9-8645-0a65fd991b4b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - notification_services
+_core:
+  default_config_hash: vRVKTYevG54kNgqhnQnOZDWY2EN6bvDWRXuC2CfElrU
+name: 'Notification templates'
+type: notification_templates
+description: 'Content type that can be used to add notification template.'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

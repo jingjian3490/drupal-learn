@@ -1,0 +1,31 @@
+uuid: 819133d8-00b8-4c8b-ba9d-5d823f2f3646
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.notification_templates.field_attachment
+    - field.field.node.notification_templates.field_email_content
+    - field.field.node.notification_templates.field_email_subject
+    - field.field.node.notification_templates.field_template_key
+    - node.type.notification_templates
+  module:
+    - user
+_core:
+  default_config_hash: gTe6mnR8FtJgf8LMfWicXY6xsTEjD0Cll0zC4o-fxGM
+id: node.notification_templates.teaser
+targetEntityType: node
+bundle: notification_templates
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachment: true
+  field_email_content: true
+  field_email_subject: true
+  field_template_key: true
+  langcode: true

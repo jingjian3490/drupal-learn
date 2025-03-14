@@ -1,0 +1,21 @@
+uuid: c5c9659d-6bfe-4d84-ab38-10bc988beeb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_subject
+    - node.type.notification_templates
+_core:
+  default_config_hash: 1lq21KqwpC7rOGIbDXZOPIE4--FoSYEhVSwkZBQeET4
+id: node.notification_templates.field_email_subject
+field_name: field_email_subject
+entity_type: node
+bundle: notification_templates
+label: 'Email Subject'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

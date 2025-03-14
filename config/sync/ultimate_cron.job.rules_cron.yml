@@ -1,0 +1,17 @@
+uuid: b3e6806f-5fb4-43ae-9fd2-bffdc019e495
+langcode: en
+status: true
+dependencies:
+  module:
+    - rules
+title: 'Default cron handler'
+id: rules_cron
+weight: 0
+module: rules
+callback: rules_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

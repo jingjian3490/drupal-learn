@@ -1,0 +1,18 @@
+uuid: f8f60076-2f3a-45f8-bc32-6411e91f3b23
+langcode: en
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: 2054463918@qq.com
+  pass: cfsafguaclupbgic
+  host: smtp.qq.com
+  port: null
+  query:
+    verify_peer: true
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null

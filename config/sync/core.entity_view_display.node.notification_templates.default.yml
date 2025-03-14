@@ -1,0 +1,59 @@
+uuid: 482bd116-8418-4dc5-a06c-24ae4e0cb912
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.notification_templates.field_attachment
+    - field.field.node.notification_templates.field_email_content
+    - field.field.node.notification_templates.field_email_subject
+    - field.field.node.notification_templates.field_template_key
+    - node.type.notification_templates
+  module:
+    - file
+    - text
+    - user
+_core:
+  default_config_hash: LpMocjBZGBIJtJUQ8AVMg1Na_FEbTfVtYwi3-yt1mVo
+id: node.notification_templates.default
+targetEntityType: node
+bundle: notification_templates
+mode: default
+content:
+  field_attachment:
+    weight: 104
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_email_content:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email_subject:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_template_key:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
