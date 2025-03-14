@@ -15,3 +15,11 @@ effects:
       width: 480
       height: 480
       upscale: false
+  cf878b71-aa24-4325-baad-ba43ac8cd4ac:
+    uuid: cf878b71-aa24-4325-baad-ba43ac8cd4ac
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 480
+      height: 480
+      anchor: center-center
