@@ -1,0 +1,5 @@
+name: 'Forcontu Users'
+type: module
+description: 'Learn user permission and access control'
+package: Forcontu
+core_version_requirement: ^10 || ^11

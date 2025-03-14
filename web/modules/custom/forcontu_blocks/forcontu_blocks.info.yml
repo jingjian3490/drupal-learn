@@ -1,0 +1,5 @@
+name: 'Forcontu Blocks'
+type: module
+description: 'Learn plugin api.'
+package: Forcontu
+core_version_requirement: ^10 || ^11

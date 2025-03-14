@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * T.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * @file
+ * Functions to support theming in the Forcontu Bartik theme.
+ */
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function forcontu_bartik_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['forcontu_bartik'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Bartik Forcontu settings'),
+  ];
+  $form['forcontu_bartik']['show_twig_message'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Display "Twig Debug" message'),
+    '#default_value' => theme_get_setting('show_twig_message'),
+    '#description' => t('Check this option if you want to display a message when Twig Debug is enabled.'),
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function forcontu_bartik_preprocess_html(array &$variables): void {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function forcontu_bartik_preprocess_page(array &$variables): void {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function forcontu_bartik_preprocess_node(array &$variables): void {
+
+}

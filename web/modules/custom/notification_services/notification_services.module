@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * For notifications.
+ */
+
+use Drupal\Component\Render\FormattableMarkup;
+
+/**
+ * Define notification template.
+ *
+ * @var string
+ */
+const TEMPLATE_KEY = 'template_key';
+
+/**
+ * Implements hook_mail().
+ */
+function notification_services_mail($key, &$message, $params) {
+  $params['subject'] = htmlspecialchars($params['subject']);
+  $message['subject'] = new FormattableMarkup($params['subject'], $params['token']);
+  $message['body'][] = new FormattableMarkup($params['body'], $params['token']);
+  if (isset($params['headers']) && is_array($params['headers'])) {
+    $message['headers'] = array_merge($message['headers'], $params['headers']);
+  }
+  if (isset($message['headers']['From'])) {
+    $message['headers']['From'] = $params['token']['@email_from'] ?? $message['headers']['From'];
+  }
+
+  // Add attachment when available.
+  if (!empty($params['attachment'])) {
+    $message['params']['attachments'] = $params['attachment'];
+  }
+}

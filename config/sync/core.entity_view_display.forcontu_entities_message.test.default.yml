@@ -1,0 +1,67 @@
+uuid: c06b00e2-d3aa-4da5-a2e6-39f7d62aaec6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forcontu_entities_message.test.field_color
+    - field.field.forcontu_entities_message.test.field_link
+    - field.field.forcontu_entities_message.test.field_test_color
+    - forcontu_entities_message.forcontu_entities_message_type.test
+  module:
+    - field_example
+    - forcontu_field
+    - link
+    - text
+id: forcontu_entities_message.test.default
+targetEntityType: forcontu_entities_message
+bundle: test
+mode: default
+content:
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_color:
+    type: forcontu_entities_simple_text
+    label: above
+    settings:
+      formatter_tag: div
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_test_color:
+    type: field_example_simple_text
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  subject:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content: true
+  created: true
+  uid: true
+  user_id: true
+  user_to: true

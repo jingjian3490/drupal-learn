@@ -1,0 +1,18 @@
+forcontu_entities.forcontu_entities_section.*:
+  type: config_entity
+  label: Section
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    urlPattern:
+      type: string
+      label: URL Pattern
+    color:
+      type: string
+      label: Color

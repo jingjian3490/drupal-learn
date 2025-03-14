@@ -1,0 +1,8 @@
+name: 'Email Login'
+type: module
+description: '允许用户通过电子邮件验证码登录。'
+package: Custom
+core_version_requirement: ^10
+
+dependencies:
+  - user

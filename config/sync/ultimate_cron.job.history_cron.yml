@@ -1,0 +1,17 @@
+uuid: cdb2036c-72fe-465c-9ca9-e97cae69bf3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - history
+title: 'Deletes history'
+id: history_cron
+weight: 0
+module: history
+callback: history_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

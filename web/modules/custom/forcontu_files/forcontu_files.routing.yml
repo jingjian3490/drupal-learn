@@ -1,0 +1,15 @@
+forcontu_files.unmanaged:
+  path: '/forcontu/files/unmanaged'
+  defaults:
+    _title: 'Unmanaged file upload'
+    _form: 'Drupal\forcontu_files\Form\Unmanaged'
+  requirements:
+    _permission: 'access content'
+
+forcontu_files.managed:
+  path: '/forcontu-files/managed'
+  defaults:
+    _title: 'Managed file upload'
+    _form: 'Drupal\forcontu_files\Form\Managed'
+  requirements:
+    _permission: 'access content'

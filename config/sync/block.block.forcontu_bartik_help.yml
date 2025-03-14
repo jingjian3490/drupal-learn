@@ -1,0 +1,22 @@
+uuid: 0c6237fc-b744-40a4-a84c-cc0683b19745
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: forcontu_bartik_help
+theme: forcontu_bartik
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

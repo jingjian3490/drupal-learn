@@ -1,0 +1,108 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the forcontu_forms module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function forcontu_forms_schema(): array {
+  $schema['forcontu_forms_simple'] = [
+    'description' => 'Stores Simple form data',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'ID autoincrement',
+      ],
+      'title' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Title',
+      ],
+      'color' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'size' => 'tiny',
+        'description' => 'Color code',
+      ],
+      'username' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Username',
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'Email',
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'UID',
+      ],
+      'ip' => [
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'IP address',
+      ],
+      'timestamp' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp',
+      ],
+    ],
+    // Use primary key, not primary_key.
+    // Do not trust AI easily, especially in fields you are unfamiliar with.
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function forcontu_forms_update_10001(&$sandbox) {
+
+  // 获取数据库连接。.
+  $schema = \Drupal::database()->schema();
+
+  // 检查表是否已存在。.
+  if (!$schema->tableExists('forcontu_node_highlighted')) {
+    // 定义表结构。.
+    $schema->createTable('forcontu_node_highlighted', [
+      'fields' => [
+        'nid' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'description' => 'Node ID',
+        ],
+        'highlighted' => [
+          'type' => 'int',
+          'size' => 'tiny',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => 'Highlighted flag (0 or 1)',
+        ],
+      ],
+      'primary key' => ['nid'],
+    ]);
+
+    // 添加索引（如果需要，可以根据你的需求添加索引）。
+    // $schema->addIndex('forcontu_node_highlighted', 'nid');.
+  }
+}

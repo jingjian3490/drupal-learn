@@ -1,0 +1,5 @@
+_core:
+  default_config_hash: Q8dRcSFORaz30q4Ci_yIe2JluIQNtSqFIgcrN39FDrc
+message: 'Default message 2.'
+allowed_types:
+  - article

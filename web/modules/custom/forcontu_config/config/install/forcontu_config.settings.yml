@@ -1,0 +1,6 @@
+newsletter:
+  subject: ''
+  default_from_email: ''
+  active: true
+  periodicity: weekly
+  news_number: 10

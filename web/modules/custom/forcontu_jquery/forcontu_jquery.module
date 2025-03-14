@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * T.
+ */
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Primary module hooks for Forcontu jQuery module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function forcontu_jquery_theme($existing, $type, $theme, $path) {
+  return [
+    'jquery_base_theme' => [
+      'variables' => [
+        'title' => NULL,
+        'description' => NULL,
+      ],
+      // 在定义主题钩子时，模板名称的定义有时不是必要的，特别是当模板文件名与主题钩子名称一致时。Drupal会自动寻找与主题钩子名称对应的模板文件。
+      // 不过，为了确保代码的清晰性和避免潜在的问题，显式地定义模板文件名是个好习惯。.
+      /*
+       * If no template name is specified, the default template name will use
+       * the theme name, and any '_' in the theme name will be interpreted
+       * as '-'.
+       * If a template name is specified, the '_' in the template name will not
+       * be interpreted '-'.
+       */
+      'template' => 'jquery_base',
+    ],
+
+    'my_module_list' => [
+      'variables' => ['my_modules' => NULL, 'parents' => NULL, 'tid' => NULL],
+    ],
+    'my_module_icon' => [
+      'variables' => ['new_posts' => NULL, 'num_posts' => 0, 'comment_mode' => 0, 'sticky' => 0],
+    ],
+  ];
+}

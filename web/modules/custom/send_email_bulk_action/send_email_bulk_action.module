@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * T.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function send_email_bulk_action_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.send_email_bulk_action':
+      return '<p>' . t('Provides a custom event for Rules to trigger email sending.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_rules_event_info().
+ */
+function send_email_bulk_action_rules_event_info() {
+  $events = [];
+
+  // 注册 SendEmailEvent 事件.
+  $events['send_email_rule'] = [
+    'label' => t('Send email event'),
+    'group' => t('Custom events'),
+    'variable' => [
+      'user' => [
+        'label' => t('User'),
+        'type' => 'entity:user',
+      ],
+    ],
+  ];
+
+  return $events;
+}

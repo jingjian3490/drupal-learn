@@ -1,0 +1,7 @@
+name: 'Forcontu Views'
+type: module
+description: 'Learn view progrem'
+package: Forcontu
+core_version_requirement: ^10 || ^11
+dependencies:
+  - forcontu_forms:forcontu_forms

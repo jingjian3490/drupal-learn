@@ -860,6 +860,23 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
+/*
+ * 修改 social_auth_google.settings.yml 文件.
+ * 使用这种方法，Social Auth Google 模块将能够正常工作
+ * 因为 Drupal 的配置系统会优先使用 settings.php 中的覆盖配置。
+ * 这样，您就可以安全地提交 social_auth_google.settings.yml 文件，
+ * 而不用担心泄露敏感信息。
+ */
+// Load and decode Google Auth credentials
+$google_auth_key_file = DRUPAL_ROOT . '/../config/key/social_auth_google.key';
+if (file_exists($google_auth_key_file)) {
+  $google_auth_decoded = json_decode(base64_decode(file_get_contents($google_auth_key_file)), TRUE);
+  if (isset($google_auth_decoded['client_id']) && isset($google_auth_decoded['client_secret'])) {
+    $config['social_auth_google.settings']['client_id'] = $google_auth_decoded['client_id'];
+    $config['social_auth_google.settings']['client_secret'] = $google_auth_decoded['client_secret'];
+  }
+}
+
 $settings['config_sync_directory'] = DRUPAL_ROOT . '/../config/sync';
 
 // Automatically generated include for settings managed by ddev.

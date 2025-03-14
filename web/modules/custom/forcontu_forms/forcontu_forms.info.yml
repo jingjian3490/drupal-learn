@@ -1,0 +1,6 @@
+name: 'forcontu_forms'
+type: module
+description: 'Learm form api.'
+package: Forcontu
+core_version_requirement: ^10 || ^11
+configure: forcontu_forms.settings

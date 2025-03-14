@@ -1,0 +1,18 @@
+services:
+  notification_services.common_service:
+    class: Drupal\notification_services\Services\NotificationCommonServices
+    arguments:
+      - '@entity_type.manager'
+  notification_services.email_service:
+    class: Drupal\notification_services\Services\EmailServices
+    arguments:
+      - '@entity_type.manager'
+      - '@plugin.manager.mail'
+      - '@config.factory'
+      - '@notification_services.common_service'
+  notification_services.sms_service:
+    class: Drupal\notification_services\Services\SmsServices
+    arguments:
+      - '@http_client'
+      - '@config.factory'
+      - '@logger.factory'

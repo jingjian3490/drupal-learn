@@ -1,0 +1,5 @@
+name: 'Forcontu Drush'
+type: module
+description: 'Learn custom drush command.'
+package: Forcontu
+core_version_requirement: ^10 || ^11

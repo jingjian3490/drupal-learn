@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: Zcy7G-9ZjMbyfnWClmNOuAjvrfvxgyDB4hkTCT7Yxl4
+newsletter:
+  subject: 'Drupal Learn'
+  default_from_email: caneg@ciandt.com
+  active: true
+  periodicity: weekly
+  news_number: 10

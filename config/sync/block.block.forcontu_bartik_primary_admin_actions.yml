@@ -1,0 +1,20 @@
+uuid: 07825a40-4793-450a-99dd-082d2c317ec4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: forcontu_bartik_primary_admin_actions
+theme: forcontu_bartik
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

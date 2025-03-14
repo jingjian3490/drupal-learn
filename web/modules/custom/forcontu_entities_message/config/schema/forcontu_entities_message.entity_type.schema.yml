@@ -1,0 +1,12 @@
+forcontu_entities_message.forcontu_entities_message_type.*:
+  type: config_entity
+  label: 'Message type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

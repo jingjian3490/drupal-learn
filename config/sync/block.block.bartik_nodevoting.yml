@@ -1,0 +1,29 @@
+uuid: b13a5493-f420-492d-a90b-8cb03fdcd14b
+langcode: en
+status: true
+dependencies:
+  module:
+    - forcontu_blocks
+    - node
+  theme:
+    - bartik
+id: bartik_nodevoting
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: forcontu_blocks_node_voting_block
+settings:
+  id: forcontu_blocks_node_voting_block
+  label: 'Node Voting'
+  label_display: visible
+  provider: forcontu_blocks
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page

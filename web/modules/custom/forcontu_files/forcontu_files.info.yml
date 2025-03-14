@@ -1,0 +1,5 @@
+name: 'Forcontu Files'
+type: module
+description: 'Learn Form with File.'
+package: Forcontu
+core_version_requirement: ^10 || ^11

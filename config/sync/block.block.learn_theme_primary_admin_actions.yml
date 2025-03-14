@@ -8,8 +8,8 @@ _core:
   default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
 id: learn_theme_primary_admin_actions
 theme: learn_theme
-region: information
-weight: -5
+region: banner
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

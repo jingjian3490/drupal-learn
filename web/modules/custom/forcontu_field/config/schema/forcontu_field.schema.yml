@@ -1,0 +1,18 @@
+field.forcontu_entities_color.value:
+  type: sequence
+  label: 'Default value'
+  sequence:
+    - type: mapping
+      label: 'Default'
+      mapping:
+        value:
+          type: string
+          label: 'Value'
+
+field.value.entity_user_access:
+  type: mapping
+  label: Default value
+  mapping:
+    value:
+      type: label
+      label: Value

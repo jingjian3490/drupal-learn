@@ -1,0 +1,8 @@
+uuid: e6a97909-bb48-467d-8139-6474fc60874f
+langcode: en
+status: true
+dependencies: {  }
+id: xin_wen_lie_biao
+label: 新闻列表
+urlPattern: xxxxxxxxxx
+color: '#000000'

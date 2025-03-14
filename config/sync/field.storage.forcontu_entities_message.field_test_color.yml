@@ -1,0 +1,19 @@
+uuid: a95c1f85-dc9b-4ff5-acce-6e7d24e9cc3b
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_example
+    - forcontu_entities_message
+id: forcontu_entities_message.field_test_color
+field_name: field_test_color
+entity_type: forcontu_entities_message
+type: field_example_rgb
+settings: {  }
+module: field_example
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

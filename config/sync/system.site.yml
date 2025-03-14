@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: de8f1b77-2890-4945-a99e-d947c0be7098
 name: 'Drupal Learn'
-mail: caneg@ciandt.com
+mail: 2054463918@qq.com
 slogan: 'Up Up Up'
 page:
   403: ''
@@ -12,3 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
+mail_notification: null

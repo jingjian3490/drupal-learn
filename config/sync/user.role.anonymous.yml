@@ -8,6 +8,8 @@ dependencies:
     - comment
     - contact
     - filter
+    - forcontu_pages
+    - media
     - search
     - system
 _core:
@@ -17,8 +19,11 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access calculator'
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access tab2 page'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'

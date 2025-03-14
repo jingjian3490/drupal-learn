@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for forcontu_forms module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function forcontu_forms_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
+  $base_form_id = '';
+  if (isset($form_state->getBuildInfo()['base_form_id'])) {
+    $base_form_id = $form_state->getBuildInfo()['base_form_id'];
+    $base_form_id = " And base form id is: $base_form_id";
+  }
+  // Drupal::messenger()->addMessage("Form id is: $form_id." . $base_form_id);.
+  switch ($form_id) {
+    case 'system_site_information_settings':
+      $form['site_information']['site_slogan']['#required'] = TRUE;
+      break;
+
+    case 'node_page_form':
+    case 'node_page_edit_form':
+      // 展开选项组.
+      $form['options']['#open'] = TRUE;
+
+      // 添加 highlighted 元素.
+      $form['options']['highlighted'] = [
+        '#type' => 'checkbox',
+        '#title' => t('Highlighted'),
+        '#weight' => 100,
+      ];
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for node_form.
+ *
+ *  Base form id. Not form id.
+ */
+function forcontu_forms_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $highlighted = 0;
+  if ($nid = $form_state->getFormObject()->getEntity()->id()) {
+    $connection = \Drupal::database();
+    $highlighted = $connection->select('forcontu_node_highlighted', 'f')
+      ->fields('f', ['highlighted'])
+      ->condition('f.nid', $nid)
+      ->execute()
+      ->fetchField();
+  }
+  $form['options']['#open'] = TRUE;
+
+  $form['options']['highlighted'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Highlighted'),
+    '#default_value' => $highlighted,
+    '#weight' => 100,
+  ];
+
+  $form['actions']['submit']['#submit'][] = 'forcontu_forms_form_node_form_submit';
+}
+
+/**
+ * T.
+ */
+function forcontu_forms_form_node_form_submit(array &$form, FormStateInterface $form_state) {
+  $nid = $form_state->get('nid');
+  $highlighted = $form_state->getValue('highlighted');
+  $connection = \Drupal::database();
+
+  $upsert = $connection->upsert('forcontu_node_highlighted')
+    ->key('nid')
+    ->fields(['nid', 'highlighted'])
+    ->values([
+      'nid' => $nid,
+      'highlighted' => $highlighted,
+    ])->execute();
+}

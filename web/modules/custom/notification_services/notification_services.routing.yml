@@ -1,0 +1,7 @@
+notification_services.settings:
+  path: '/admin/config/notification-services/settings'
+  defaults:
+    _form: '\Drupal\notification_services\Form\SmsSettingsForm'
+    _title: '短信服务设置'
+  requirements:
+    _permission: 'administer site configuration'
